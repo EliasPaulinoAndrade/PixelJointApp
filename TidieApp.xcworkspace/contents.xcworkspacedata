@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Features"
+      name = "Features">
+      <FileRef
+         location = "group:Bugiganga/Bugiganga.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Lucha/Lucha.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Root/Root.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Kits"
+      name = "Kits">
+      <FileRef
+         location = "group:AnalyticsKit/AnalyticsKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:CoreKit/CoreKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:CoredataKit/CoredataKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:NetworkingKit/NetworkingKit.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:Tidie/Tidie.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

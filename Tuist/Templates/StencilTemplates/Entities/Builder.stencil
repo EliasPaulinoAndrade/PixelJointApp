@@ -1,0 +1,40 @@
+import UIKit
+import CoreKit
+{% macro builderParamenters %}{% if hasListener == "True" %}listener: {{ name }}Listener{% endif %}{% endmacro %}
+{% macro interactorParamenters %}{% if hasView == "True" %}presenter: {% if hasPresenter == "True" %}presenter{% else %}view{% endif %}{% endif %}{% endmacro %}
+
+protocol {{ name }}Buildable {
+    func make{{ name }}({% call builderParamenters %}) -> {% if hasView == "True" %}Viewable{% endif %}Coordinating
+}
+
+final class {{ name }}Builder: {{ name }}Buildable {
+    {% if hasView != "True" %}
+    private let view: UIViewController
+    init(view: UIViewController) {
+        self.view = view
+    }
+    {% endif %}
+    func make{{ name }}({% call builderParamenters %}) -> {% if hasView == "True" %}Viewable{% endif %}Coordinating {
+        {% if hasView == "True" %}
+        let view = {{ name }}ViewController()
+        {% if hasPresenter == "True" %}
+        let presenter = {{ name }}Presenter(view: view)
+        {% endif %}
+        {% endif %}
+        let interactor = {{ name }}Interactor({% call interactorParamenters %})
+        let coordinator = {{ name }}Coordinator(
+            {% if hasView == "True" %}viewController: view,{% endif %}
+            interactor: interactor
+        )
+        
+        {% if hasView == "True" %}
+        view.interactor = interactor
+        {% endif %}
+        interactor.coordinator = coordinator
+        {% if hasListener == "True" %}
+        interactor.listener = listener
+        {% endif %}
+        
+        return coordinator
+    }
+}

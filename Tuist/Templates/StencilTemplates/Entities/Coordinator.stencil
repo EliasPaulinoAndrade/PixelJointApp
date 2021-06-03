@@ -1,0 +1,14 @@
+import CoreKit
+{% if hasView == "True" %}import UIKit{% endif %}
+
+protocol {{ name }}Coordinating: AnyObject {
+    // Add methods that interactor should call to open new scenes
+}
+
+final class {{ name }}Coordinator: {% if hasView == "True" %}Viewable{% endif %}Coordinator {
+
+}
+
+extension {{ name }}Coordinator: {{ name }}Coordinating {
+    // {{ name }}Coordinating methods
+}

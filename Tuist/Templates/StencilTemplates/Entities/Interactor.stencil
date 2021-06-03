@@ -1,0 +1,37 @@
+import Foundation
+import CoreKit
+{% if hasView == "True" %}
+protocol {{ name }}Interacting: AnyObject {
+    // Add methods that view should call
+}
+{% endif %}
+{% if hasListener == "True" %}
+public protocol {{ name }}Listener: AnyObject {
+    // Add methods for communication with parent scene
+}
+{% endif %}
+
+final class {{ name }}Interactor: Interacting {
+    {% if hasView == "True" %}
+    private let presenter: {{ name }}Presenting
+    {% endif %}
+    weak var coordinator: {{ name }}Coordinating?
+    {% if hasListener == "True" %}
+    weak var listener: {{ name }}Listener?
+    {% endif %}
+    
+    {% if hasView == "True" %}
+    init(presenter: {{ name }}Presenting) {
+        self.presenter = presenter
+    }
+    {% else %}
+    func didStart() {
+        // Add Logic to execute when the scene starts
+    }
+    {% endif %}
+}
+{% if hasView == "True" %}
+extension {{ name }}Interactor: {{ name }}Interacting {
+    // {{ name }}Interacting methods
+}
+{% endif %}

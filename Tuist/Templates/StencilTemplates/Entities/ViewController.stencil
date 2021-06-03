@@ -1,0 +1,18 @@
+import UIKit
+{% macro viewProtocol %}{{ name }}{% if hasPresenter == "True" %}Viewable{% else %}Presenting{% endif %}{% endmacro %}
+
+protocol {% call viewProtocol %}: AnyObject {
+    {% if hasPresenter == "True" %}
+    // Add methods that presenter should call
+    {% else %}
+    // Add methods that interactor should call
+    {% endif %}
+}
+
+final class {{ name }}ViewController: UIViewController {
+    weak var interactor: {{ name }}Interacting?
+}
+
+extension {{ name }}ViewController: {% call viewProtocol %} {
+    // {% call viewProtocol %} methods
+}

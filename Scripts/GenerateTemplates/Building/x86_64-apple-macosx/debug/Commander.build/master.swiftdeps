@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
+options: "0ec8467f5b0f02d6b26a22d1b22749ba"
+build_time: [1621521194, 970875000]
+inputs:
+  "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/checkouts/Commander/Sources/Commander/ArgumentConvertible.swift": [1621521194, 721890624]
+  "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/checkouts/Commander/Sources/Commander/ArgumentDescription.swift": [1621521194, 722265298]
+  "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/checkouts/Commander/Sources/Commander/ArgumentParser.swift": [1621521194, 722550811]
+  "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/checkouts/Commander/Sources/Commander/Command.swift": [1621521194, 722703132]
+  "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/checkouts/Commander/Sources/Commander/CommandRunner.swift": [1621521194, 722867110]
+  "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/checkouts/Commander/Sources/Commander/CommandType.swift": [1621521194, 723000316]
+  "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/checkouts/Commander/Sources/Commander/Commands.swift": [1621521194, 723584076]
+  "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/checkouts/Commander/Sources/Commander/Error.swift": [1621521194, 723880643]
+  "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/checkouts/Commander/Sources/Commander/Group.swift": [1621521194, 724101907]

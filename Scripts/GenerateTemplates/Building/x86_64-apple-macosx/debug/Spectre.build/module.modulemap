@@ -1,0 +1,4 @@
+module Spectre {
+    header "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/x86_64-apple-macosx/debug/Spectre.build/Spectre-Swift.h"
+    requires objc
+}

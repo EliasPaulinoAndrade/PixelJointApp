@@ -1,0 +1,17 @@
+import Foundation
+
+protocol {{ name }}Presenting: AnyObject {
+    // Add methods that interactor should call
+}
+
+final class {{ name }}Presenter {
+    private let view: {{ name }}Viewable
+    
+    init(view: {{ name }}Viewable) {
+        self.view = view
+    }
+}
+
+extension {{ name }}Presenter: {{ name }}Presenting {
+    // {{ name }}Presenting methods
+}

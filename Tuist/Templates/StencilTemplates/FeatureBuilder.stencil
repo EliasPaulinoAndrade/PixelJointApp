@@ -1,0 +1,9 @@
+import Foundation
+import CoreKit
+import UIKit
+
+public protocol {{ name }}Buildable {
+    func make{{ name }}(view: UIViewController) -> Coordinating
+}
+
+// Implemment the {{ name }}Builder here

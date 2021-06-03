@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/x86_64-apple-macosx/debug/GenerateTemplates.build/master.swiftdeps"
+  },
+  "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Sources/GenerateTemplates/main.swift": {
+    "dependencies": "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/x86_64-apple-macosx/debug/GenerateTemplates.build/main.d",
+    "object": "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/x86_64-apple-macosx/debug/GenerateTemplates.build/main.swift.o",
+    "swiftmodule": "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/x86_64-apple-macosx/debug/GenerateTemplates.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/x86_64-apple-macosx/debug/GenerateTemplates.build/main.swiftdeps"
+  }
+}

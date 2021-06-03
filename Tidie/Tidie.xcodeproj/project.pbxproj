@@ -1,0 +1,661 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1040E08F9FEDE1A39097CA9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53982092D745E4907DEE55B7 /* LaunchScreen.storyboard */; };
+		16F1B687683B2720E2397164 /* LuchaConnectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F097D63FD8A5D52AC788F /* LuchaConnectionBuilder.swift */; };
+		1D266EEAF165B8D5452EC9B1 /* TidieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169F83C9BBFE290514413F5E /* TidieTests.swift */; };
+		32DA20B57B7ABAF564D347E5 /* BugigangaConnectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A7BB352298BA46EB4A79 /* BugigangaConnectionBuilder.swift */; };
+		496810A98467C5E9096A8EC6 /* Lucha.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95EA3276F674FB3B1CBA5EA8 /* Lucha.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5FC7F2054F58B16898C2255F /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8C16B41EAF3876103A423D /* RootCoordinator.swift */; };
+		641C7CDF4AA5A35BBA922971 /* BugigangaConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BABCA1E767521C8E17DBA9 /* BugigangaConnection.swift */; };
+		655037DC8F71A07E66AC864E /* CoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F3F909B444B690AB9A7C025 /* CoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		752452F19650E316ACAE75A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6841C5F779E4B59C6C2E7A2F /* ViewController.swift */; };
+		8F4EA587AFCA8A9F1E5238C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5CA343B002C450477E0F1D8 /* Assets.xcassets */; };
+		915BF0FC19A14A3BCBB54C6A /* Bugiganga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2309E631EFCCA1152C5E158C /* Bugiganga.framework */; };
+		94E53424D60C32FAF6C0B5DE /* Lucha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95EA3276F674FB3B1CBA5EA8 /* Lucha.framework */; };
+		A336DF8C3E4BB1C4A1E25C0D /* LuchaConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654C6002687330D4B41D6FA4 /* LuchaConnection.swift */; };
+		A3F8244BA77487F423A80F35 /* Bugiganga.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2309E631EFCCA1152C5E158C /* Bugiganga.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5335CA8C4F72DDBB8591B11 /* Bundle+Tidie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645E45B7FF93041286B9FAD3 /* Bundle+Tidie.swift */; };
+		AE462A3BE5D6E4AA3DC4C0A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F9EE2CD34CAA868FC044A /* AppDelegate.swift */; };
+		D51D074DE0DBAA74AEF8BCCA /* Assets+Tidie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1524481ED24D259C8EB11 /* Assets+Tidie.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A2A66BA8E1766578B611DEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9BC5D0CA8435810406EEC41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBC066196CDD579C41D19024;
+			remoteInfo = Tidie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		31D1D0C1BA2FDEF10BCE723B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE8B54F706EC508084783CC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A3F8244BA77487F423A80F35 /* Bugiganga.framework in Embed Frameworks */,
+				655037DC8F71A07E66AC864E /* CoreKit.framework in Embed Frameworks */,
+				496810A98467C5E9096A8EC6 /* Lucha.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		169F83C9BBFE290514413F5E /* TidieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TidieTests.swift; sourceTree = "<group>"; };
+		2263FA4DBCCE058D803F039F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2309E631EFCCA1152C5E158C /* Bugiganga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bugiganga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		264BF753C93B7BCCC265BD30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4D5F9EE2CD34CAA868FC044A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50C1524481ED24D259C8EB11 /* Assets+Tidie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Tidie.swift"; sourceTree = "<group>"; };
+		5F3F909B444B690AB9A7C025 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		645E45B7FF93041286B9FAD3 /* Bundle+Tidie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Tidie.swift"; sourceTree = "<group>"; };
+		654C6002687330D4B41D6FA4 /* LuchaConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuchaConnection.swift; sourceTree = "<group>"; };
+		6841C5F779E4B59C6C2E7A2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84BABCA1E767521C8E17DBA9 /* BugigangaConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugigangaConnection.swift; sourceTree = "<group>"; };
+		95EA3276F674FB3B1CBA5EA8 /* Lucha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lucha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9922CFF413C2FF71B0EBC0DF /* TidieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TidieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A441212C07BF3437FFB1BE99 /* Tidie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tidie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5CA343B002C450477E0F1D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AB8C16B41EAF3876103A423D /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		E235A7BB352298BA46EB4A79 /* BugigangaConnectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugigangaConnectionBuilder.swift; sourceTree = "<group>"; };
+		E83F097D63FD8A5D52AC788F /* LuchaConnectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuchaConnectionBuilder.swift; sourceTree = "<group>"; };
+		EFB484F4156901D267B566ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A0E174EC90A52C2159EC387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56542306535FF5D84AFF5D2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				915BF0FC19A14A3BCBB54C6A /* Bugiganga.framework in Frameworks */,
+				94E53424D60C32FAF6C0B5DE /* Lucha.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		15307DA6D686879C55C1C414 = {
+			isa = PBXGroup;
+			children = (
+				BA1C55D2C31DEFF17C721B70 /* Project */,
+				53134BD6B7CE77EA1C9C6EF1 /* Frameworks */,
+				5E4377AA5BE81C6C1A4ADBEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53134BD6B7CE77EA1C9C6EF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57235C6334BEC45496ABB2C9 /* Lucha */ = {
+			isa = PBXGroup;
+			children = (
+				654C6002687330D4B41D6FA4 /* LuchaConnection.swift */,
+				E83F097D63FD8A5D52AC788F /* LuchaConnectionBuilder.swift */,
+			);
+			path = Lucha;
+			sourceTree = "<group>";
+		};
+		5E4377AA5BE81C6C1A4ADBEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2309E631EFCCA1152C5E158C /* Bugiganga.framework */,
+				5F3F909B444B690AB9A7C025 /* CoreKit.framework */,
+				95EA3276F674FB3B1CBA5EA8 /* Lucha.framework */,
+				A441212C07BF3437FFB1BE99 /* Tidie.app */,
+				9922CFF413C2FF71B0EBC0DF /* TidieTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6EE3E00A9120A6B69FB71536 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				53982092D745E4907DEE55B7 /* LaunchScreen.storyboard */,
+				A5CA343B002C450477E0F1D8 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		93BD412E42F629AC1BFAC387 /* Tidie */ = {
+			isa = PBXGroup;
+			children = (
+				6EE3E00A9120A6B69FB71536 /* Resources */,
+				C16EB801916DAB67B3265622 /* Sources */,
+				EFB484F4156901D267B566ED /* Info.plist */,
+			);
+			path = Tidie;
+			sourceTree = "<group>";
+		};
+		A0A8445EB6186A1FE88A1E48 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				169F83C9BBFE290514413F5E /* TidieTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A8F8586E8E99272DA81D7271 /* Connections */ = {
+			isa = PBXGroup;
+			children = (
+				DEC57081B87141ECB204E629 /* Bugiganga */,
+				57235C6334BEC45496ABB2C9 /* Lucha */,
+			);
+			path = Connections;
+			sourceTree = "<group>";
+		};
+		BA1C55D2C31DEFF17C721B70 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				E3B25A85EF746D403FAAA5BC /* Derived */,
+				93BD412E42F629AC1BFAC387 /* Tidie */,
+				BB91CEBAEA31E266F75AF8D9 /* TidieTests */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		BB91CEBAEA31E266F75AF8D9 /* TidieTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0A8445EB6186A1FE88A1E48 /* Tests */,
+				2263FA4DBCCE058D803F039F /* Info.plist */,
+			);
+			path = TidieTests;
+			sourceTree = "<group>";
+		};
+		C16EB801916DAB67B3265622 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A8F8586E8E99272DA81D7271 /* Connections */,
+				4D5F9EE2CD34CAA868FC044A /* AppDelegate.swift */,
+				AB8C16B41EAF3876103A423D /* RootCoordinator.swift */,
+				6841C5F779E4B59C6C2E7A2F /* ViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D20F7EFE0EEE30B67B86CD33 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				50C1524481ED24D259C8EB11 /* Assets+Tidie.swift */,
+				645E45B7FF93041286B9FAD3 /* Bundle+Tidie.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DEC57081B87141ECB204E629 /* Bugiganga */ = {
+			isa = PBXGroup;
+			children = (
+				84BABCA1E767521C8E17DBA9 /* BugigangaConnection.swift */,
+				E235A7BB352298BA46EB4A79 /* BugigangaConnectionBuilder.swift */,
+			);
+			path = Bugiganga;
+			sourceTree = "<group>";
+		};
+		E3B25A85EF746D403FAAA5BC /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				D20F7EFE0EEE30B67B86CD33 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29002011281F402D5D28E3BB /* TidieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFAF2B7FCDFC88129A27C15F /* Build configuration list for PBXNativeTarget "TidieTests" */;
+			buildPhases = (
+				DF315A29AD690620BC818E14 /* Sources */,
+				2D60FE716FB9827F006D85BE /* Resources */,
+				6800292BCBF91C12722870E4 /* Embed Precompiled Frameworks */,
+				31D1D0C1BA2FDEF10BCE723B /* Embed Frameworks */,
+				4A0E174EC90A52C2159EC387 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33CECD79D4D848393ED14857 /* PBXTargetDependency */,
+			);
+			name = TidieTests;
+			productName = TidieTests;
+			productReference = 9922CFF413C2FF71B0EBC0DF /* TidieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BBC066196CDD579C41D19024 /* Tidie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74BE7FDF1BD0C4317AB718A0 /* Build configuration list for PBXNativeTarget "Tidie" */;
+			buildPhases = (
+				C8C9DB26E75CB4396FE5F219 /* Swift Lint */,
+				6A7462A60B2B91FC609B51D5 /* Sources */,
+				952B75CB4A4402DEEF221B9C /* Resources */,
+				6E884DD2BC062825F54F4957 /* Embed Precompiled Frameworks */,
+				3DE8B54F706EC508084783CC /* Embed Frameworks */,
+				56542306535FF5D84AFF5D2E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tidie;
+			productName = Tidie;
+			productReference = A441212C07BF3437FFB1BE99 /* Tidie.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9BC5D0CA8435810406EEC41 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				TargetAttributes = {
+					29002011281F402D5D28E3BB = {
+						TestTargetID = BBC066196CDD579C41D19024;
+					};
+				};
+			};
+			buildConfigurationList = FADFAD3A3A9CC3B6A8056FAF /* Build configuration list for PBXProject "Tidie" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 15307DA6D686879C55C1C414;
+			productRefGroup = 5E4377AA5BE81C6C1A4ADBEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBC066196CDD579C41D19024 /* Tidie */,
+				29002011281F402D5D28E3BB /* TidieTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D60FE716FB9827F006D85BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952B75CB4A4402DEEF221B9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F4EA587AFCA8A9F1E5238C3 /* Assets.xcassets in Resources */,
+				1040E08F9FEDE1A39097CA9D /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6800292BCBF91C12722870E4 /* Embed Precompiled Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Precompiled Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Skipping, nothing to be embedded.\"";
+		};
+		6E884DD2BC062825F54F4957 /* Embed Precompiled Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Precompiled Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"Skipping, nothing to be embedded.\"";
+		};
+		C8C9DB26E75CB4396FE5F219 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "swiftlint --config ./../.swiftlint.yml";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6A7462A60B2B91FC609B51D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D51D074DE0DBAA74AEF8BCCA /* Assets+Tidie.swift in Sources */,
+				A5335CA8C4F72DDBB8591B11 /* Bundle+Tidie.swift in Sources */,
+				AE462A3BE5D6E4AA3DC4C0A5 /* AppDelegate.swift in Sources */,
+				641C7CDF4AA5A35BBA922971 /* BugigangaConnection.swift in Sources */,
+				32DA20B57B7ABAF564D347E5 /* BugigangaConnectionBuilder.swift in Sources */,
+				A336DF8C3E4BB1C4A1E25C0D /* LuchaConnection.swift in Sources */,
+				16F1B687683B2720E2397164 /* LuchaConnectionBuilder.swift in Sources */,
+				5FC7F2054F58B16898C2255F /* RootCoordinator.swift in Sources */,
+				752452F19650E316ACAE75A3 /* ViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF315A29AD690620BC818E14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D266EEAF165B8D5452EC9B1 /* TidieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33CECD79D4D848393ED14857 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Tidie;
+			target = BBC066196CDD579C41D19024 /* Tidie */;
+			targetProxy = 9A2A66BA8E1766578B611DEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		53982092D745E4907DEE55B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				264BF753C93B7BCCC265BD30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3CF01C62E03B51D7D6DA8B0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Tidie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.Tidie;
+				PRODUCT_NAME = Tidie;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3E99391CAB347945B696E881 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		649ECED683718076EC04AAA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TidieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.TidieTests;
+				PRODUCT_NAME = TidieTests;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tidie.app/Tidie";
+				TEST_TARGET_NAME = Tidie;
+			};
+			name = Debug;
+		};
+		64E6B2B100DEB02394D66EFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		90681646202E577E473A6F25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = TidieTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.TidieTests;
+				PRODUCT_NAME = TidieTests;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tidie.app/Tidie";
+				TEST_TARGET_NAME = Tidie;
+			};
+			name = Release;
+		};
+		AB5B392046E6708F58D9B3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Tidie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.Tidie;
+				PRODUCT_NAME = Tidie;
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74BE7FDF1BD0C4317AB718A0 /* Build configuration list for PBXNativeTarget "Tidie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB5B392046E6708F58D9B3F8 /* Debug */,
+				3CF01C62E03B51D7D6DA8B0E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFAF2B7FCDFC88129A27C15F /* Build configuration list for PBXNativeTarget "TidieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				649ECED683718076EC04AAA9 /* Debug */,
+				90681646202E577E473A6F25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FADFAD3A3A9CC3B6A8056FAF /* Build configuration list for PBXProject "Tidie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64E6B2B100DEB02394D66EFB /* Debug */,
+				3E99391CAB347945B696E881 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9BC5D0CA8435810406EEC41 /* Project object */;
+}
