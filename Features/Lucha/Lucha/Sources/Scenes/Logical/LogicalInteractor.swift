@@ -1,5 +1,6 @@
 import Foundation
 import CoreKit
+import PuccaInterface
 
 final class LogicalInteractor: Interacting {
     weak var coordinator: LogicalCoordinating?
@@ -8,13 +9,20 @@ final class LogicalInteractor: Interacting {
 //        if Bool.random() {
 //            coordinator?.openMucha()
 //        } else {
-            coordinator?.openBugiganga(listener: self)
+        coordinator?.openPucca(listener: self)
 //        }
     }
 }
 
 extension LogicalInteractor: BugigangaListener {
     func userDidFinish() {
+        coordinator?.closeOpenedScene()
+        coordinator?.openMucha()
+    }
+}
+
+extension LogicalInteractor: PuccaListener {
+    func userClosed() {
         coordinator?.closeOpenedScene()
         coordinator?.openMucha()
     }

@@ -2,6 +2,7 @@ import Foundation
 import CoreKit
 import Lucha
 import UIKit
+import Bugiganga
 
 final class LuchaConnection: ConnectionCoodinator {
     init(luchaBuilder: LuchaBuildable) {
@@ -10,8 +11,15 @@ final class LuchaConnection: ConnectionCoodinator {
     }
 }
 
-extension LuchaConnection: BugigangaBuildable {
-    func makeBugiganga(listener: BugigangaListener) -> ViewableCoordinating {
-        ViewableCoordinator.empty(title: "Bugiganga")
+extension LuchaConnection: Lucha.BugigangaBuildable {
+    func makeBugiganga(listener: Lucha.BugigangaListener) -> ViewableCoordinating {
+        BugigangaBuilder().makeBugiganga(listener: self)
+//        ViewableCoordinator.empty(title: "Bugiganga")
+    }
+}
+
+extension LuchaConnection: Bugiganga.BugigangaListener {
+    func userDidFinish() {
+        
     }
 }

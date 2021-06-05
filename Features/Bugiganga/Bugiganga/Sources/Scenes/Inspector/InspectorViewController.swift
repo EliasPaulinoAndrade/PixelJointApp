@@ -45,7 +45,6 @@ struct InspectorView: View {
                 Spacer()
             }.padding(10)
         }
-         
     }
 }
 

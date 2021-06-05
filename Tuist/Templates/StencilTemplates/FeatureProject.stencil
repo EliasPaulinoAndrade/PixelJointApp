@@ -3,5 +3,5 @@ import ProjectDescriptionHelpers
 
 let project = Project.featureProject(
     name: "{{ name }}",
-    sampleResources: ["{{ name }}Sample/Resources/**/*"]
+    hasResources: false
 )

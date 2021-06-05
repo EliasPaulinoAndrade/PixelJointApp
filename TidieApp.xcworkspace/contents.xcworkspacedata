@@ -11,6 +11,9 @@
          location = "group:Lucha/Lucha.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:Pucca/Pucca.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Root/Root.xcodeproj">
       </FileRef>
    </Group>

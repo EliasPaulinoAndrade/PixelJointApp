@@ -18,6 +18,7 @@ final class LogicalBuilder: LogicalBuildable {
         let coordinator = LogicalCoordinator(
             muchaBuilder: MuchaBuilder(),
             bugigangaBuilder: externalFeaturesBuider,
+            puccaBuilder: externalFeaturesBuider,
             router: ModalRouter(viewController: view, logger: ConsoleLogger()),
             viewController: view,
             interactor: interactor

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1040E08F9FEDE1A39097CA9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53982092D745E4907DEE55B7 /* LaunchScreen.storyboard */; };
+		12A5ECBB8C3FE611CEE82702 /* Pucca.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB7BECAF64C978B4EE45FBA /* Pucca.framework */; };
 		16F1B687683B2720E2397164 /* LuchaConnectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F097D63FD8A5D52AC788F /* LuchaConnectionBuilder.swift */; };
 		1D266EEAF165B8D5452EC9B1 /* TidieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169F83C9BBFE290514413F5E /* TidieTests.swift */; };
 		32DA20B57B7ABAF564D347E5 /* BugigangaConnectionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235A7BB352298BA46EB4A79 /* BugigangaConnectionBuilder.swift */; };
@@ -23,7 +24,10 @@
 		A3F8244BA77487F423A80F35 /* Bugiganga.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2309E631EFCCA1152C5E158C /* Bugiganga.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5335CA8C4F72DDBB8591B11 /* Bundle+Tidie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645E45B7FF93041286B9FAD3 /* Bundle+Tidie.swift */; };
 		AE462A3BE5D6E4AA3DC4C0A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5F9EE2CD34CAA868FC044A /* AppDelegate.swift */; };
+		BEC704D844C6B1CDF8D84D62 /* Pucca.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8EB7BECAF64C978B4EE45FBA /* Pucca.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D51D074DE0DBAA74AEF8BCCA /* Assets+Tidie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1524481ED24D259C8EB11 /* Assets+Tidie.swift */; };
+		E03AE1FC742205048AE611A6 /* PuccaInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6497E7C0E9A06F03D6A1253E /* PuccaInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E3BCB2E9266AF55C00390EF9 /* PuccaBuilderProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BCB2E8266AF55C00390EF9 /* PuccaBuilderProxy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,8 @@
 				A3F8244BA77487F423A80F35 /* Bugiganga.framework in Embed Frameworks */,
 				655037DC8F71A07E66AC864E /* CoreKit.framework in Embed Frameworks */,
 				496810A98467C5E9096A8EC6 /* Lucha.framework in Embed Frameworks */,
+				BEC704D844C6B1CDF8D84D62 /* Pucca.framework in Embed Frameworks */,
+				E03AE1FC742205048AE611A6 /* PuccaInterface.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,15 +77,18 @@
 		50C1524481ED24D259C8EB11 /* Assets+Tidie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Tidie.swift"; sourceTree = "<group>"; };
 		5F3F909B444B690AB9A7C025 /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		645E45B7FF93041286B9FAD3 /* Bundle+Tidie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Tidie.swift"; sourceTree = "<group>"; };
+		6497E7C0E9A06F03D6A1253E /* PuccaInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PuccaInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		654C6002687330D4B41D6FA4 /* LuchaConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuchaConnection.swift; sourceTree = "<group>"; };
 		6841C5F779E4B59C6C2E7A2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84BABCA1E767521C8E17DBA9 /* BugigangaConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugigangaConnection.swift; sourceTree = "<group>"; };
+		8EB7BECAF64C978B4EE45FBA /* Pucca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pucca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EA3276F674FB3B1CBA5EA8 /* Lucha.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lucha.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9922CFF413C2FF71B0EBC0DF /* TidieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TidieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A441212C07BF3437FFB1BE99 /* Tidie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tidie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5CA343B002C450477E0F1D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB8C16B41EAF3876103A423D /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		E235A7BB352298BA46EB4A79 /* BugigangaConnectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugigangaConnectionBuilder.swift; sourceTree = "<group>"; };
+		E3BCB2E8266AF55C00390EF9 /* PuccaBuilderProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuccaBuilderProxy.swift; sourceTree = "<group>"; };
 		E83F097D63FD8A5D52AC788F /* LuchaConnectionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuchaConnectionBuilder.swift; sourceTree = "<group>"; };
 		EFB484F4156901D267B566ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +107,7 @@
 			files = (
 				915BF0FC19A14A3BCBB54C6A /* Bugiganga.framework in Frameworks */,
 				94E53424D60C32FAF6C0B5DE /* Lucha.framework in Frameworks */,
+				12A5ECBB8C3FE611CEE82702 /* Pucca.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +145,8 @@
 				2309E631EFCCA1152C5E158C /* Bugiganga.framework */,
 				5F3F909B444B690AB9A7C025 /* CoreKit.framework */,
 				95EA3276F674FB3B1CBA5EA8 /* Lucha.framework */,
+				8EB7BECAF64C978B4EE45FBA /* Pucca.framework */,
+				6497E7C0E9A06F03D6A1253E /* PuccaInterface.framework */,
 				A441212C07BF3437FFB1BE99 /* Tidie.app */,
 				9922CFF413C2FF71B0EBC0DF /* TidieTests.xctest */,
 			);
@@ -171,6 +183,7 @@
 		A8F8586E8E99272DA81D7271 /* Connections */ = {
 			isa = PBXGroup;
 			children = (
+				E3BCB2E7266AF53D00390EF9 /* Pucca */,
 				DEC57081B87141ECB204E629 /* Bugiganga */,
 				57235C6334BEC45496ABB2C9 /* Lucha */,
 			);
@@ -231,6 +244,14 @@
 				D20F7EFE0EEE30B67B86CD33 /* Sources */,
 			);
 			path = Derived;
+			sourceTree = "<group>";
+		};
+		E3BCB2E7266AF53D00390EF9 /* Pucca */ = {
+			isa = PBXGroup;
+			children = (
+				E3BCB2E8266AF55C00390EF9 /* PuccaBuilderProxy.swift */,
+			);
+			path = Pucca;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +408,7 @@
 				32DA20B57B7ABAF564D347E5 /* BugigangaConnectionBuilder.swift in Sources */,
 				A336DF8C3E4BB1C4A1E25C0D /* LuchaConnection.swift in Sources */,
 				16F1B687683B2720E2397164 /* LuchaConnectionBuilder.swift in Sources */,
+				E3BCB2E9266AF55C00390EF9 /* PuccaBuilderProxy.swift in Sources */,
 				5FC7F2054F58B16898C2255F /* RootCoordinator.swift in Sources */,
 				752452F19650E316ACAE75A3 /* ViewController.swift in Sources */,
 			);

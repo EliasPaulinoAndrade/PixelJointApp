@@ -13,6 +13,7 @@
 		1EF344AAC6F99362A4D6EE64 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148E9A7849C03E9A9D22B6D2 /* BannerViewController.swift */; };
 		27C95A2639B09913874D60C0 /* Lucha.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59F319DB3B4E0C0AC2C7233B /* Lucha.framework */; };
 		31BE2BE8F396AC8C2CEBDD85 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153B92DA8815F1DE3B243C93 /* RootCoordinator.swift */; };
+		3287A1937168B8D240E996E9 /* PuccaInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156D8EDC1896A5343B82FA4D /* PuccaInterface.framework */; };
 		375B4A664B6D6D4948437339 /* MuchaInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B4AB960C80ADBE8B9F7FAC /* MuchaInteractor.swift */; };
 		39917BFD07C4E9D75E03393E /* Bundle+LuchaSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70959A8E9FF38A88E26A5B69 /* Bundle+LuchaSample.swift */; };
 		4A283BC0A16EEC6A65BE3F3B /* BannerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D75060EB6AEF88F8E4DEB /* BannerPresenter.swift */; };
@@ -31,6 +32,7 @@
 		AEF33F817CEEC5B84B64A50B /* CoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCC8C1CB98D23660FA68930A /* CoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEE68F92F5618F9DC4ABE757 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5C8338F15C4CAE66060968 /* Place.swift */; };
 		C1344082BE10FAAAA74E4752 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46414F3A37AA68C0F7CE1938 /* Item.swift */; };
+		C2E3C64B9B8794F6DA1D66CB /* PuccaInterface.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 156D8EDC1896A5343B82FA4D /* PuccaInterface.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D6115E5A524933376D8790C9 /* Lucha.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 59F319DB3B4E0C0AC2C7233B /* Lucha.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8509D0C4244880EC3EC7355 /* LogicalBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B174DD0B2CE3CA6CCCF435 /* LogicalBuilder.swift */; };
 		E3B808570929E34720FD9E8C /* BannerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E076251B50F178662B9225FD /* BannerBuilder.swift */; };
@@ -38,6 +40,7 @@
 		E8B5D3861115F0045F916ED5 /* LuchaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BB66573A42BCEA21BC7B6 /* LuchaTests.swift */; };
 		EB8649C277B7BF3EC2DDF194 /* Lucha.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F34275D0625966710C56701C /* Lucha.xcassets */; };
 		EF47B2E13AEB14CEA0378137 /* LogicalCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44068AE2870025521A60AA6 /* LogicalCoordinator.swift */; };
+		F2F83FE5DCFFD365D8FCD4D5 /* PuccaInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 156D8EDC1896A5343B82FA4D /* PuccaInterface.framework */; };
 		F36D04DC9898D8D0E1C896B4 /* Assets+Lucha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA8630B2861C624D09195F0 /* Assets+Lucha.swift */; };
 		F4792D4ABD28EFC900E73E20 /* CoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCC8C1CB98D23660FA68930A /* CoreKit.framework */; };
 		FEC01E818D6608AB1412D21C /* MuchaCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488145000326D5FF73F8C5D /* MuchaCoordinator.swift */; };
@@ -90,6 +93,7 @@
 			files = (
 				AEF33F817CEEC5B84B64A50B /* CoreKit.framework in Embed Frameworks */,
 				D6115E5A524933376D8790C9 /* Lucha.framework in Embed Frameworks */,
+				C2E3C64B9B8794F6DA1D66CB /* PuccaInterface.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +106,7 @@
 		0DA8630B2861C624D09195F0 /* Assets+Lucha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Lucha.swift"; sourceTree = "<group>"; };
 		148E9A7849C03E9A9D22B6D2 /* BannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		153B92DA8815F1DE3B243C93 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		156D8EDC1896A5343B82FA4D /* PuccaInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PuccaInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15E949F2F06AA1F7A0A29424 /* LuchaBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuchaBuilder.swift; sourceTree = "<group>"; };
 		19083ED93DE4AB631594BE88 /* MuchaPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuchaPresenter.swift; sourceTree = "<group>"; };
 		2ED8DD5E24D4AD05F19BB447 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -141,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3E5D4BAB7DC170748AF72D2 /* CoreKit.framework in Frameworks */,
+				F2F83FE5DCFFD365D8FCD4D5 /* PuccaInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +156,7 @@
 			files = (
 				F4792D4ABD28EFC900E73E20 /* CoreKit.framework in Frameworks */,
 				27C95A2639B09913874D60C0 /* Lucha.framework in Frameworks */,
+				3287A1937168B8D240E996E9 /* PuccaInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +346,7 @@
 				59F319DB3B4E0C0AC2C7233B /* Lucha.framework */,
 				2FD1D6AA895423F6AA53B51F /* LuchaSample.app */,
 				6E407D8485E4A1373E6E73C0 /* LuchaTests.xctest */,
+				156D8EDC1896A5343B82FA4D /* PuccaInterface.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";

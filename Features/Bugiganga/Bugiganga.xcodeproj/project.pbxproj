@@ -344,8 +344,6 @@
 		289CDEFB64326386592C1A30 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = B04150FD6CEF08D6729485C9 /* Build configuration list for PBXProject "Bugiganga" */;
 			compatibilityVersion = "Xcode 9.3";

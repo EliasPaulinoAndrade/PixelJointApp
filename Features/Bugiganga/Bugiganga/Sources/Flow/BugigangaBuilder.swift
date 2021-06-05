@@ -8,7 +8,6 @@ public protocol BugigangaBuildable {
 
 public typealias BugigangaListener = InspectorListener
 
-
 public final class BugigangaBuilder: BugigangaBuildable {
     public init() { }
     public func makeBugiganga(listener: BugigangaListener) -> ViewableCoordinating {

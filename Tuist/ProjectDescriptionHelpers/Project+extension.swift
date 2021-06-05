@@ -46,7 +46,7 @@ extension Project {
     public static func kitProject(name kitName: String,
                                   depedencies: [TargetDependency] = [],
                                   resources: ResourceFileElements? = nil) -> Project {
-        return .defaultProject(
+        .defaultProject(
             projectName: kitName,
             product: .framework,
             depedencies: depedencies,
@@ -55,34 +55,65 @@ extension Project {
     }
     
     public static func featureProject(name featureName: String,
+                                      hasResources: Bool,
                                       depedencies: [TargetDependency] = [],
                                       hasSample: Bool = true,
-                                      resources: ResourceFileElements? = nil,
-                                      sampleResources: ResourceFileElements? = nil) -> Project {
-        let featureSampleName = "\(featureName)Sample"
-        let featureDefaultDepedencies: [TargetDependency] = [
-            .project(target: "CoreKit", path: "../../Kits/CoreKit"),
+                                      hasInterface: Bool = false,
+                                      extraTargets: [Target] = []) -> Project {
+        let featureDepedencies = depedencies + featureDefaultDepedencies()
+        let interfaceTarget = interfaceTarget(featureName: featureName)
+        let interfaceDepedency = TargetDependency.target(name: interfaceTarget.name)
+        let featureInterfaceDepedency = hasInterface ? [interfaceDepedency] : []
+        let sampleTarget = sampleTarget(
+            featureName: featureName,
+            featureDepedencies: featureDepedencies + featureInterfaceDepedency
+        )
+        let sampleTargetArray = hasSample ? [sampleTarget] : []
+        let interfaceTargetArray = hasInterface ? [interfaceTarget] : []
+        let featureResources: ResourceFileElements? = hasResources ? ["\(featureName)/Resources/**/*"] : []
+        
+        return .defaultProject(
+            projectName: featureName,
+            product: .framework,
+            depedencies: featureDepedencies + featureInterfaceDepedency,
+            resources: featureResources,
+            extraTargets: sampleTargetArray + interfaceTargetArray + extraTargets
+        )
+    }
+    
+    private static func featureDefaultDepedencies() -> [TargetDependency] {
+        [
+            .project(target: "CoreKit", path: "../../Kits/CoreKit")
         ]
-        let featureDepedencies = depedencies + featureDefaultDepedencies
-        let featureSampleTarget = Target(
+    }
+    
+    private static func interfaceTarget(featureName: String) -> Target {
+        let featureInterfaceName = "\(featureName)Interface"
+        
+        return Target(
+            name: featureInterfaceName,
+            platform: .iOS,
+            product: .framework,
+            bundleId: "io.tuist.\(featureInterfaceName)",
+            infoPlist: "\(featureInterfaceName)/Info.plist",
+            sources: ["\(featureInterfaceName)/Sources/**"],
+            dependencies: featureDefaultDepedencies()
+        )
+    }
+
+    private static func sampleTarget(featureName: String,
+                                     featureDepedencies: [TargetDependency]) -> Target {
+        let featureSampleName = "\(featureName)Sample"
+        
+        return Target(
             name: featureSampleName,
             platform: .iOS,
             product: .app,
             bundleId: "io.tuist.\(featureSampleName)",
             infoPlist: "\(featureSampleName)/Info.plist",
             sources: ["\(featureSampleName)/Sources/**"],
-            resources: sampleResources,
-            dependencies: [ .target(name: featureName)]  + featureDepedencies
-        )
-        
-        let extraTargets = hasSample ? [featureSampleTarget] : []
-        
-        return .defaultProject(
-            projectName: featureName,
-            product: .framework,
-            depedencies: featureDepedencies,
-            resources: resources,
-            extraTargets: extraTargets
+            resources: ["\(featureSampleName)/Resources/**/*"],
+            dependencies: [ .target(name: featureName) ]  + featureDepedencies
         )
     }
 }
