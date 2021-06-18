@@ -1,0 +1,20 @@
+import XCTest
+@testable import {{ feature }}
+
+//sourcery: spy
+extension {{ name }}Viewable { }
+
+final class {{ name }}PresenterTests: XCTestCase {
+    private let viewSpy = {{ name }}ViewableSpy()
+
+    func testExample() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+}
+
+extension {{ name }}PresenterTests {
+    private func makeSut() -> {{ name }}Presenter {
+        {{ name }}Presenter(view: viewSpy)
+    }
+}

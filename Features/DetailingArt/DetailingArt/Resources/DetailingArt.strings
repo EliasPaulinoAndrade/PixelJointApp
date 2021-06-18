@@ -1,0 +1,10 @@
+"OnArtDetailExpanded.SeeFullSize" = "See Detail";
+"OnArtDetailExpanded.CouldNotLoadComments" = "Could not load more comments";
+"OnArtDetailExpanded.TapToRetry" = "Tap here to retry";
+"OnArtDetailExpanded.NoMoreComments" = "There are no more comments";
+"OnArtDetailExpanded.CouldNotLoadArt" = "Could not load this pixel art";
+"OnArtDetailExpanded.SeeFullSize" = "See Detail";
+"OnArtDetailMinimized.CouldNotLoadArt" = "Could not load this pixel art";
+"OnArtDetailMinimized.TapToRetry" = "Tap here to retry";
+"OnImageFullSize.xTimes" = "%@ x";
+"By" = "by %@";

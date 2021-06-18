@@ -1,4 +1,7 @@
 import ProjectDescription
 import ProjectDescriptionHelpers
 
-let project = Project.kitProject(name: "NetworkingKit")
+let project = Project.kitProject(
+    name: "NetworkingKit",
+    hasInterface: true
+)

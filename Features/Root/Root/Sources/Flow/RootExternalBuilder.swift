@@ -1,1 +1,5 @@
-public typealias RootExternalBuilder = LuchaBuildable
+import Foundation
+import ListingArtsInterface
+import DetailingArtInterface
+
+public typealias RootExternalBuildable = ListingArtsBuildable & DetailingArtBuildable

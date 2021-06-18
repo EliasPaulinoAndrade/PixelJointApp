@@ -1,0 +1,17 @@
+import XCTest
+import TestKit
+@testable import {{ feature }}
+
+final class {{ name }}CoordinatorTests: XCTestCase {
+
+    func testExample() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+}
+
+extension {{ name }}CoordinatorTests {
+    private func makeSut() -> {{ name }}Coordinator {
+        {{ name }}Coordinator({% if hasView == "True" %}viewController: UIViewController(), {% endif %}interactor: InteractingStub())
+    }
+}

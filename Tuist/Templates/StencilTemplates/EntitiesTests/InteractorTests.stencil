@@ -1,0 +1,33 @@
+import XCTest
+@testable import {{ feature }}
+
+{% if hasView == "True" %}
+//sourcery: spy
+extension {{ name }}Presenting { }
+{% endif %}
+{% if hasListener == "True" %}
+//sourcery: spy
+extension {{ name }}Listener { }
+{% endif %}
+
+final class {{ name }}InteractorTests: XCTestCase {
+    {% if hasView == "True" %}
+    private let presenterSpy = {{ name }}PresentingSpy()
+    {% endif %}
+    {% if hasListener == "True" %}
+    private let listenerSpy = {{ name }}ListenerSpy()
+    {% endif %}
+
+    func testExample() throws {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+}
+
+extension {{ name }}InteractorTests {
+    private func makeSut() -> {{ name }}Interactor {
+        let interactor = {{ name }}Interactor({% if hasView == "True" %}presenter: presenterSpy{% endif %})
+        {% if hasListener == "True" %}interactor.listener = listenerSpy{% endif %}
+        return interactor
+    }
+}

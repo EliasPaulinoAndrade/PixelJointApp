@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Features"
+      name = "Features">
+      <FileRef
+         location = "group:DetailingArt/DetailingArt.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:ListingArts/ListingArts.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Root/Root.xcodeproj">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Kits"
+      name = "Kits">
+      <FileRef
+         location = "group:CoreKit/CoreKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:NetworkingKit/NetworkingKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TestKit/TestKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:UIToolKit/UIToolKit.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:WebScrapingKit/WebScrapingKit.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:PixelJoint/PixelJoint.xcodeproj">
+   </FileRef>
+</Workspace>

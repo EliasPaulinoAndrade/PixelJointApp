@@ -3,12 +3,19 @@ import CoreKit
 import UIKit
 
 public protocol RootBuildable {
-    func makeRoot(view: UIViewController, externalFeaturesBuider: RootExternalBuilder) -> Coordinating
+    func makeRoot() -> ViewableCoordinating
 }
 
-public final class RootBuilder: RootBuildable {
-    public init() { }
-    public func makeRoot(view: UIViewController, externalFeaturesBuider: RootExternalBuilder) -> Coordinating {
-        HasStartedBuilder(view: view, externalFeaturesBuider: externalFeaturesBuider).makeHasStarted()
+public struct RootBuilder: RootBuildable {
+    private let externalBuilder: RootExternalBuildable
+    private let externalDepedency: RootExternalDepedencing
+    
+    public init(externalBuilder: RootExternalBuildable, externalDepedency: RootExternalDepedencing) {
+        self.externalBuilder = externalBuilder
+        self.externalDepedency = externalDepedency
+    }
+    
+    public func makeRoot() -> ViewableCoordinating {
+        OnAppStartBuilder(externalBuilder: externalBuilder, externalDepedency: externalDepedency).makeOnAppStart()
     }
 }

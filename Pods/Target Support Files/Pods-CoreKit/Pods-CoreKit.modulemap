@@ -1,6 +1,0 @@
-module Pods_CoreKit {
-  umbrella header "Pods-CoreKit-umbrella.h"
-
-  export *
-  module * { export * }
-}

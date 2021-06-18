@@ -4,13 +4,23 @@ extension Project {
     public static func defaultProject(projectName: String,
                                       product: Product,
                                       depedencies: [TargetDependency],
+                                      packages: [Package] = [],
+                                      testExtraDepedencies: [TargetDependency] = [],
+                                      additionalFiles: [FileElement] = [],
                                       lintConfigPath: String = "./../../.swiftlint.yml",
                                       resources: ResourceFileElements? = nil,
-                                      extraTargets: [Target] = []) -> Project {
+                                      extraTargets: [Target] = [],
+                                      testActions: [TargetAction] = []) -> Project {
         let testTargetName = "\(projectName)Tests"
+        
+        let swiftLintAction = TargetAction.pre(
+            script: "swiftlint --config \(lintConfigPath)",
+            name: "Swift Lint"
+        )
         
         return Project(
             name: projectName,
+            packages: packages,
             targets: [
                 Target(
                     name: projectName,
@@ -20,12 +30,7 @@ extension Project {
                     infoPlist: "\(projectName)/Info.plist",
                     sources: ["\(projectName)/Sources/**"],
                     resources: resources,
-                    actions: [
-                        .pre(
-                            script: "swiftlint --config \(lintConfigPath)",
-                            name: "Swift Lint"
-                        )
-                    ],
+                    actions: [swiftLintAction],
                     dependencies: depedencies
                 ),
                 Target(
@@ -35,28 +40,49 @@ extension Project {
                     bundleId: "io.tuist.\(testTargetName)",
                     infoPlist: "\(testTargetName)/Info.plist",
                     sources: ["\(testTargetName)/Tests/**"],
+                    actions: testActions,
                     dependencies: [
-                        .target(name: projectName)
-                    ]
+                        .target(name: projectName),
+                    ] + testExtraDepedencies
                 )
-            ] + extraTargets
+            ] + extraTargets,
+            additionalFiles: additionalFiles
         )
     }
     
     public static func kitProject(name kitName: String,
+                                  hasInterface: Bool = false,
                                   depedencies: [TargetDependency] = [],
-                                  resources: ResourceFileElements? = nil) -> Project {
-        .defaultProject(
+                                  packages: [Package] = [],
+                                  additionalFiles: [FileElement] = [],
+                                  hasResources: Bool = false) -> Project {
+        let interfaceTarget = interfaceTarget(featureName: kitName)
+        let interfaceDepedency = TargetDependency.target(name: interfaceTarget.name)
+        let interfaceTargetArray = hasInterface ? [interfaceTarget] : []
+        let featureInterfaceDepedency = hasInterface ? [interfaceDepedency] : []
+        let sourceryTestAction = TargetAction.pre(
+            script: "sourcery --sources . --templates ./../../Tuist/Templates/StencilTemplates/Doubles.stencil --output ./\(kitName)Tests/Tests/Generated --args moduleName=\(kitName)",
+            name: "Sourcery"
+        )
+        let kitResources: ResourceFileElements? = hasResources ? ["\(kitName)/Resources/**/*"] : []
+        
+        return .defaultProject(
             projectName: kitName,
             product: .framework,
-            depedencies: depedencies,
-            resources: resources
+            depedencies: depedencies + featureInterfaceDepedency,
+            packages: packages,
+            testExtraDepedencies: [.project(target: "TestKit", path: "./../../Kits/TestKit")],
+            additionalFiles: additionalFiles,
+            resources: kitResources,
+            extraTargets: interfaceTargetArray,
+            testActions: [sourceryTestAction]
         )
     }
     
     public static func featureProject(name featureName: String,
                                       hasResources: Bool,
                                       depedencies: [TargetDependency] = [],
+                                      packages: [Package] = [],
                                       hasSample: Bool = true,
                                       hasInterface: Bool = false,
                                       extraTargets: [Target] = []) -> Project {
@@ -71,13 +97,20 @@ extension Project {
         let sampleTargetArray = hasSample ? [sampleTarget] : []
         let interfaceTargetArray = hasInterface ? [interfaceTarget] : []
         let featureResources: ResourceFileElements? = hasResources ? ["\(featureName)/Resources/**/*"] : []
+        let sourceryTestAction = TargetAction.pre(
+            script: "sourcery --sources . --templates ./../../Tuist/Templates/StencilTemplates/Doubles.stencil --output ./\(featureName)Tests/Tests/Generated --args moduleName=\(featureName)",
+            name: "Sourcery"
+        )
         
         return .defaultProject(
             projectName: featureName,
             product: .framework,
             depedencies: featureDepedencies + featureInterfaceDepedency,
+            packages: packages,
+            testExtraDepedencies: [.project(target: "TestKit", path: "./../../Kits/TestKit")],
             resources: featureResources,
-            extraTargets: sampleTargetArray + interfaceTargetArray + extraTargets
+            extraTargets: sampleTargetArray + interfaceTargetArray + extraTargets,
+            testActions: [sourceryTestAction]
         )
     }
     
@@ -88,15 +121,15 @@ extension Project {
     }
     
     private static func interfaceTarget(featureName: String) -> Target {
-        let featureInterfaceName = "\(featureName)Interface"
+        let interfaceName = "\(featureName)Interface"
         
         return Target(
-            name: featureInterfaceName,
+            name: interfaceName,
             platform: .iOS,
             product: .framework,
-            bundleId: "io.tuist.\(featureInterfaceName)",
-            infoPlist: "\(featureInterfaceName)/Info.plist",
-            sources: ["\(featureInterfaceName)/Sources/**"],
+            bundleId: "io.tuist.\(interfaceName)",
+            infoPlist: "\(interfaceName)/Info.plist",
+            sources: ["\(interfaceName)/Sources/**"],
             dependencies: featureDefaultDepedencies()
         )
     }

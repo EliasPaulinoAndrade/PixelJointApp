@@ -1,0 +1,24 @@
+import XCTest
+@testable import {{ argument.moduleName }}
+
+{% for protocol in types.protocols|annotated:"spy"%}
+final class {{ protocol.name }}Spy: {{ protocol.name }} {
+    enum Invocation: Equatable, Hashable {
+        {% for method in protocol.allMethods %}
+        {% map method.parameters into paramentersTypes %}{{ maploop.item.typeName }}{% endmap %}
+        case {{ method.callName }}{% if method.parameters.count != 0 %}({{ paramentersTypes|join: ", " }}){% endif %}
+        {% endfor %}
+    }
+    var invocations: [Invocation] = []
+    var uniqueInvocation: Invocation?
+    {% for method in protocol.allMethods %}
+    func {{ method.name }} {
+        {% map method.parameters into paramentersTypes %}{{ maploop.item.name }}{% endmap %}
+        let invocation = Invocation.{{method.callName}}{% if method.parameters.count != 0 %}({{ paramentersTypes|join: ", " }}){% endif %}
+        invocations.append(invocation)
+        uniqueInvocation = uniqueInvocation == nil ? invocation : nil
+    }
+    {% endfor %}
+}
+
+{% endfor %}

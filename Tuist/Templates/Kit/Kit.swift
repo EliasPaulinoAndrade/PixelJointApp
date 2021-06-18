@@ -26,6 +26,10 @@ let kit: Template = {
         .file(
             path: "./Kits/\(kitName)/\(kitName)Tests/Tests/\(kitName)Tests.swift",
             templatePath: "../StencilTemplates/FeatureTests.stencil"
+        ),
+        .string(
+            path: "./Kits/\(kitName)/\(kitName)Tests/Tests/Generated/Doubles.generated.swift",
+            contents: "// Empty File"
         )
     ]
     

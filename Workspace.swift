@@ -1,9 +1,9 @@
 import ProjectDescription
 
 let workspace = Workspace(
-    name: "TidieApp",
+    name: "PixelJointApp",
     projects: [
-        "Tidie",
+        "PixelJoint",
         "Features/**",
         "Kits/**"
     ]

@@ -1,5 +1,10 @@
 import UIKit
 
+public protocol StackRouting {
+    func add(coordinator: ViewableCoordinating, height: CGFloat?, priority: UILayoutPriority?)
+    func remove(coordinator: ViewableCoordinating)
+}
+
 public protocol HierarchyRouting {
     func push(_ coordinating: ViewableCoordinator)
     func pop()
@@ -20,7 +25,7 @@ public protocol ModalRouting {
 }
 
 public extension ModalRouting {
-    func present(_ coordinating: ViewableCoordinator) {
+    func present(_ coordinating: ViewableCoordinating) {
         present(coordinating, animated: true, presentationStyle: .automatic, completion: nil)
     }
     

@@ -1,4 +1,0 @@
-module Commander {
-    header "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Building/x86_64-apple-macosx/debug/Commander.build/Commander-Swift.h"
-    requires objc
-}

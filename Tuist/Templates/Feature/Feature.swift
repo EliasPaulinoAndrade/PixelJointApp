@@ -27,6 +27,10 @@ let feature: Template = {
         .file(
             path: "./Features/\(featureName)/\(featureName)Tests/Tests/\(featureName)Tests.swift",
             templatePath: "../StencilTemplates/FeatureTests.stencil"
+        ),
+        .string(
+            path: "./Features/\(featureName)/\(featureName)Tests/Tests/Generated/Doubles.generated.swift",
+            contents: "// Empty File"
         )
     ]
     

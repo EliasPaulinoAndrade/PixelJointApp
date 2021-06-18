@@ -1,5 +1,0 @@
-version: "Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
-options: "e104965eab7daf940fe740ef16ae6b7f"
-build_time: [1621521201, 296907000]
-inputs:
-  "/Users/eliaspaulino/Projects/XcodeGenTests2/Scripts/GenerateTemplates/Sources/GenerateTemplates/main.swift": [1621520712, 872020008]
