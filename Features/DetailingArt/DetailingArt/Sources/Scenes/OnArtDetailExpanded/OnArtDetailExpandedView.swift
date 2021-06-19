@@ -6,7 +6,6 @@ import WebKit
 
 enum Viewable {
     struct Accessory: Identifiable {
-        // swiftlint:disable:next identifier_name
         let id: String
         let count: String
         let image: UIImage
@@ -21,7 +20,6 @@ enum Viewable {
     }
 
     struct Comment: Identifiable {
-        // swiftlint:disable:next identifier_name
         var id: String
         let author: String
         let message: String
@@ -74,7 +72,7 @@ struct OnArtDetailExpandedView: View {
                                 .zIndex(-1)
                         }
                         Spacer()
-                    }.frame(maxWidth: .infinity, maxHeight: .infinity)
+                    }
                 }
             } else {
                 EmptyStateView(
@@ -86,6 +84,7 @@ struct OnArtDetailExpandedView: View {
                 )
             }
         }.background(Color(UIToolKitAsset.darkBackground.color))
+         .ignoresSafeArea()
     }
     
     init(stateHolder: OnArtDetailExpandedViewStateHolder, imageProvider: AnyProvider<Data>) {

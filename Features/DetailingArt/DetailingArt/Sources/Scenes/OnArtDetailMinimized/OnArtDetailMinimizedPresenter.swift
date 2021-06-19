@@ -18,7 +18,7 @@ final class OnArtDetailMinimizedPresenter {
 
 extension OnArtDetailMinimizedPresenter: OnArtDetailMinimizedPresenting {
     func presentArt(_ artDetail: PixelArtDetail) {
-        let viewableArtDetail = ViewableMinimizedArtDetail(
+        let viewableArtDetail = OnArtDetailMinimizedView.MinimizedArtDetail(
             title: artDetail.title,
             author: artDetail.authorName,
             imageResource: AsyncImageResource(

@@ -2,10 +2,12 @@ import SwiftUI
 import UIToolKit
 import NetworkingKitInterface
 
-struct ViewableMinimizedArtDetail {
-    let title: String
-    let author: String
-    var imageResource: AsyncImageResource
+extension OnArtDetailMinimizedView {
+    struct MinimizedArtDetail {
+        let title: String
+        let author: String
+        var imageResource: AsyncImageResource
+    }
 }
 
 private enum Constant {
@@ -49,7 +51,7 @@ struct OnArtDetailMinimizedView: View {
         self.imageProvider = imageProvider
     }
     
-    private func artDetailView(artDetail: ViewableMinimizedArtDetail) -> some View {
+    private func artDetailView(artDetail: OnArtDetailMinimizedView.MinimizedArtDetail) -> some View {
         HStack(spacing: 8) {
             Image(systemName: "chevron.up")
             AsyncImage(

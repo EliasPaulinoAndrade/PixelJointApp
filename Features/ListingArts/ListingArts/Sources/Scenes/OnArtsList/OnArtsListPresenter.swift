@@ -60,7 +60,7 @@ extension OnArtsListPresenter: OnArtsListPresenting {
     
     func presentArts(_ arts: [PixelArt], tips: [PixelArtTip]) {
         let artsImagesUrls = zip(arts, tips).map { pixelArt, tip in
-            ViewableArt(
+            OnArtsListView.ViewableArt(
                 id: pixelArt.identifier,
                 resource: AsyncImageResource(
                     baseURL: PixelJointConstants.baseURL,

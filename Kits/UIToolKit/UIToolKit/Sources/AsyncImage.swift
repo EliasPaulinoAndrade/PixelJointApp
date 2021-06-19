@@ -54,6 +54,7 @@ public struct AsyncImage<PlaceHolderType: View, ImageType: View>: View {
         cancellable = provider.request(resource: resource) { result in
             switch result {
             case .success(let imageData):
+//                print(UIImage.getSequence(imageData: imageData))
                 guard let resultImage = UIImage(data: imageData) else {
                     DispatchQueue.main.async {
                         isShowingPlaceHolder = true
@@ -82,4 +83,34 @@ public struct AsyncImageResource: Resource, Equatable {
         self.baseURL = baseURL
         self.path = path
     }
+}
+
+extension UIImage {
+static func getSequence(imageData: Data) -> [UIImage]? {
+
+    let gifOptions = [
+        kCGImageSourceShouldAllowFloat as String : true as NSNumber,
+        kCGImageSourceCreateThumbnailWithTransform as String : true as NSNumber,
+        kCGImageSourceCreateThumbnailFromImageAlways as String : true as NSNumber
+        ] as CFDictionary
+
+    guard let imageSource = CGImageSourceCreateWithData(imageData as CFData, gifOptions) else {
+        debugPrint("Cannot create image source with data!")
+        return nil
+    }
+
+    let framesCount = CGImageSourceGetCount(imageSource)
+    var frameList = [UIImage]()
+
+    for index in 0 ..< framesCount {
+
+        if let cgImageRef = CGImageSourceCreateImageAtIndex(imageSource, index, nil) {
+            let uiImageRef = UIImage(cgImage: cgImageRef)
+            frameList.append(uiImageRef)
+        }
+
+    }
+
+    return frameList // Your gif frames is ready
+}
 }

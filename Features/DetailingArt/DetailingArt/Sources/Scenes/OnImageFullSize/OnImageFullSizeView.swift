@@ -30,8 +30,8 @@ struct OnImageFullSizeView: View {
                         .padding(8)
                 }
                 zoomControlMenu()
-            }.background(Color.black)
-             .statusBar(hidden: true)
+            }.statusBar(hidden: true)
+             .background(Color.black.edgesIgnoringSafeArea(.all))
         } else {
             ProgressView()
         }
@@ -58,7 +58,7 @@ struct OnImageFullSizeView: View {
                     label: { }
                 )
             }.padding(8)
-        }.background(Color(UIToolKitAsset.extraDark.color))
+        }.background(Color(UIToolKitAsset.extraDark.color).ignoresSafeArea())
          .foregroundColor(Color(UIToolKitAsset.text.color))
     }
     

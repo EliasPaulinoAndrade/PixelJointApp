@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		24E7D4107601CE74BF35BDBF /* ConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E39FC9E752C6A0545B4152 /* ConsoleLogger.swift */; };
 		25C0E48F692A763FE4D77E1E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D6FB6ADCA3EB16CEA5F17B /* Router.swift */; };
 		262CFB53EFE224C3CCB0EA44 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF7FA0140F8F2882FBD0A7B /* Connection.swift */; };
+		3360330C915C9E5B3AB3271B /* TabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470F6B479FC79C3A5BB348BE /* TabRouter.swift */; };
 		3673E7E1D905FC70755E7128 /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44DF0C8C3178FB82915B603 /* TestKit.framework */; };
 		3F7B8CF3697FC918857643F1 /* AnimationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F62333E0360F775D1E6756 /* AnimationState.swift */; };
 		75CF379A0B8ADE64AB2F759F /* PopTransitionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044A8834C24DA63672065A5 /* PopTransitionState.swift */; };
@@ -27,8 +28,11 @@
 		DBB0E738CB4C9D0608E48503 /* StackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153A94E33C2FF03A9AA4DE0D /* StackRouter.swift */; };
 		E207BA5B7A9B00EDB981E7DF /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E1B36638B438D7F9BB101 /* Logging.swift */; };
 		E2260E7CEC6EBC9220BFC29C /* ModalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3393D18CECBF9B06763AA571 /* ModalRouter.swift */; };
+		E3BA23C0267E73A8002E31B6 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BA23BF267E73A8002E31B6 /* TabViewController.swift */; };
+		E3BA23C2267E73CF002E31B6 /* TabChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BA23C1267E73CF002E31B6 /* TabChild.swift */; };
 		E580C86C7AF2F9708EE27B85 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A293F1033D7B207213777C1 /* ViewCodable.swift */; };
 		EF54D61AE5E3B1C0A0CBB14C /* ModalRouterLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA51DB483AEE035672C07CF /* ModalRouterLog.swift */; };
+		FCBD225C932893E14EB25C1E /* TabRouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1D3DCEB00141417CD7911 /* TabRouterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,7 @@
 		3A3978C2ED49A1E4705095FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3C7A12A7A7DBA8ED41105BE1 /* LogCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCategories.swift; sourceTree = "<group>"; };
 		41FD58F156C554897BD04512 /* PresentationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationInfo.swift; sourceTree = "<group>"; };
+		470F6B479FC79C3A5BB348BE /* TabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRouter.swift; sourceTree = "<group>"; };
 		52723F81A683584838C84654 /* HierarchyRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchyRouter.swift; sourceTree = "<group>"; };
 		5A293F1033D7B207213777C1 /* ViewCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCodable.swift; sourceTree = "<group>"; };
 		82A40EC583B99263A94FA1AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -83,12 +88,15 @@
 		9AE15A854DFCC2BCBDC63355 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		A1F62333E0360F775D1E6756 /* AnimationState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationState.swift; sourceTree = "<group>"; };
 		A47940E4AA4D6C9ACF6D4EBF /* CoreKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreKitTests.swift; sourceTree = "<group>"; };
+		B6B1D3DCEB00141417CD7911 /* TabRouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRouterView.swift; sourceTree = "<group>"; };
 		C2AAE03F64E749D73D20FB30 /* HierarchyRouterLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchyRouterLog.swift; sourceTree = "<group>"; };
 		C4E39FC9E752C6A0545B4152 /* ConsoleLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLogger.swift; sourceTree = "<group>"; };
 		C5D6FB6ADCA3EB16CEA5F17B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D44DF0C8C3178FB82915B603 /* TestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1E1B36638B438D7F9BB101 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		DDA51DB483AEE035672C07CF /* ModalRouterLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalRouterLog.swift; sourceTree = "<group>"; };
+		E3BA23BF267E73A8002E31B6 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		E3BA23C1267E73CF002E31B6 /* TabChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabChild.swift; sourceTree = "<group>"; };
 		FAF7FA0140F8F2882FBD0A7B /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +126,7 @@
 				31AD64328BA22119014FDE0B /* Hierarchy */,
 				CAFC1901A39F3F11C717038E /* Modal */,
 				6484D5810EE90ECF444C2BC3 /* Stack */,
+				4174648C153E01C7263141D9 /* Tab */,
 				C5D6FB6ADCA3EB16CEA5F17B /* Router.swift */,
 			);
 			path = Router;
@@ -164,6 +173,17 @@
 				7CD6F9928F3CF6C8AD2CD68F /* CoreKitTests */,
 			);
 			name = Project;
+			sourceTree = "<group>";
+		};
+		4174648C153E01C7263141D9 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				470F6B479FC79C3A5BB348BE /* TabRouter.swift */,
+				B6B1D3DCEB00141417CD7911 /* TabRouterView.swift */,
+				E3BA23BF267E73A8002E31B6 /* TabViewController.swift */,
+				E3BA23C1267E73CF002E31B6 /* TabChild.swift */,
+			);
+			path = Tab;
 			sourceTree = "<group>";
 		};
 		4FFB751CEC57DF89F1099641 /* Generated */ = {
@@ -297,8 +317,6 @@
 		D7F80DE66C28F0833825F7A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = D8FC987517002C0F6AD061BF /* Build configuration list for PBXProject "CoreKit" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -429,11 +447,15 @@
 				05D39F37EE44D8C6A0411D5B /* HierarchyState.swift in Sources */,
 				75CF379A0B8ADE64AB2F759F /* PopTransitionState.swift in Sources */,
 				E2260E7CEC6EBC9220BFC29C /* ModalRouter.swift in Sources */,
+				E3BA23C2267E73CF002E31B6 /* TabChild.swift in Sources */,
+				E3BA23C0267E73A8002E31B6 /* TabViewController.swift in Sources */,
 				EF54D61AE5E3B1C0A0CBB14C /* ModalRouterLog.swift in Sources */,
 				78339018F43C6591DC534C9A /* PresentationInfo.swift in Sources */,
 				25C0E48F692A763FE4D77E1E /* Router.swift in Sources */,
 				DBB0E738CB4C9D0608E48503 /* StackRouter.swift in Sources */,
 				1047BF0D60105F47F7335308 /* StackViewController.swift in Sources */,
+				3360330C915C9E5B3AB3271B /* TabRouter.swift in Sources */,
+				FCBD225C932893E14EB25C1E /* TabRouterView.swift in Sources */,
 				E580C86C7AF2F9708EE27B85 /* ViewCodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +483,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CoreKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,6 +508,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CoreKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,6 +530,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = CoreKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -585,6 +610,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CoreKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

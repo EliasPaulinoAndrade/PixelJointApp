@@ -12,10 +12,10 @@
 		6DF076CB917438DD6C7B9D64 /* FooterEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CC04AD758F1A499DFB1A6E /* FooterEmptyStateView.swift */; };
 		72A086F2AA4F98F8A777769F /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D995134582C2E300776566E /* EmptyStateView.swift */; };
 		A5F356F9E7093EE427F0FAB4 /* NetworkingKitInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9394B79FC92E78BB0004D0D /* NetworkingKitInterface.framework */; };
+		A97D5CA33D8BFE4BB5887D74 /* AsyncAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03BE5EB4FD51DE10E997101 /* AsyncAnimatedImage.swift */; };
 		AA7E98446804661FDFCD57BB /* UIToolKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EACA510F8E54D1983D70A7 /* UIToolKitTests.swift */; };
 		BFDDDFA9A628724D783335D8 /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0869236CA0CC3D85F22EB0AF /* AsyncImage.swift */; };
 		C6CF50F6C8DB42874D2301F6 /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372C34150EE33D9344C4EDE7 /* TestKit.framework */; };
-		E315691C267C16E60095F186 /* AsyncAnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E315691B267C16E60095F186 /* AsyncAnimatedImage.swift */; };
 		EE91CF506EF426D33044EC63 /* Doubles.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76100CE7387C16FBF7FB7B0E /* Doubles.generated.swift */; };
 		F1BC59E5946FFBD52C3BC74B /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F566F1F52917DA8F3E1483AD /* SDWebImageSwiftUI */; };
 		F2E190AB8A8F9377D5A3A782 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98F2AB4AB586073C461D14EA /* Assets.xcassets */; };
@@ -68,8 +68,8 @@
 		98F2AB4AB586073C461D14EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9394B79FC92E78BB0004D0D /* NetworkingKitInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkingKitInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9EACA510F8E54D1983D70A7 /* UIToolKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIToolKitTests.swift; sourceTree = "<group>"; };
-		E315691B267C16E60095F186 /* AsyncAnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAnimatedImage.swift; sourceTree = "<group>"; };
 		E5214477FAA812E093D1BC00 /* Bundle+UIToolKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+UIToolKit.swift"; sourceTree = "<group>"; };
+		F03BE5EB4FD51DE10E997101 /* AsyncAnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncAnimatedImage.swift; sourceTree = "<group>"; };
 		F149DC24F5FB7E75A06E9717 /* UIToolKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIToolKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -172,10 +172,10 @@
 		8995EEFB146CD04944A5ADD2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F03BE5EB4FD51DE10E997101 /* AsyncAnimatedImage.swift */,
 				0869236CA0CC3D85F22EB0AF /* AsyncImage.swift */,
 				7D995134582C2E300776566E /* EmptyStateView.swift */,
 				12CC04AD758F1A499DFB1A6E /* FooterEmptyStateView.swift */,
-				E315691B267C16E60095F186 /* AsyncAnimatedImage.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -257,6 +257,8 @@
 		F3B5AB013F1804CD38AD61DE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = EFC2FA4BAE43DEF8FA89D7C7 /* Build configuration list for PBXProject "UIToolKit" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -372,10 +374,10 @@
 			files = (
 				45D09531DD2C1FF691B3D557 /* Assets+UIToolKit.swift in Sources */,
 				0DC01A8C2D566D7D1AD87CFD /* Bundle+UIToolKit.swift in Sources */,
+				A97D5CA33D8BFE4BB5887D74 /* AsyncAnimatedImage.swift in Sources */,
 				BFDDDFA9A628724D783335D8 /* AsyncImage.swift in Sources */,
 				72A086F2AA4F98F8A777769F /* EmptyStateView.swift in Sources */,
 				6DF076CB917438DD6C7B9D64 /* FooterEmptyStateView.swift in Sources */,
-				E315691C267C16E60095F186 /* AsyncAnimatedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +407,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = UIToolKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -426,6 +429,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = UIToolKitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -562,6 +566,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UIToolKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -592,6 +597,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = UIToolKit/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

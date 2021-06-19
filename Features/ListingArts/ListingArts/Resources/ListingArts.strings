@@ -3,3 +3,11 @@
 "OnArtsList.TapToRetry" = "Tap here to retry";
 "OnArtsList.CouldNotLoadMore" = "Could not load more arts";
 "OnArtsList.NoMoreArts" = "There are no more arts";
+"OnSectionsList.SectionSelection" = "Section Selection";
+"OnSectionsList.PleaseChooseSection" = "Please choose a section";
+"OnSectionsList.Close" = "Close";
+"OnSectionsList.PixelJoint" = "Pixel Joint";
+"OnSectionsList.HighestRating" = "Highest Rating";
+"OnSectionsList.WeeklyShowcase" = "Weekly Showcase";
+"OnSectionsList.Newest" = "Newest";
+"OnSectionsList.MostFavorites" = "Most Favorites";

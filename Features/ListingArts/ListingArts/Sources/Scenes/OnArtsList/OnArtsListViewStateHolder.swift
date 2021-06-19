@@ -7,12 +7,13 @@ protocol OnArtsListViewable: AnyObject {
     var isShowingError: Bool { get set }
     var hasNoMorePages: Bool { get set }
     
-    func displayImages(_ arts: [ViewableArt])
+    func displayImages(_ arts: [OnArtsListView.ViewableArt])
 }
 
 final class OnArtsListViewStateHolder: ObservableObject {
     weak var interactor: OnArtsListInteracting?
-    @Published var arts: [ViewableArt] = []
+    
+    @Published var arts: [OnArtsListView.ViewableArt] = []
     @Published var isFooterLoading = false
     @Published var isLoading = false
     @Published var isFooterShowingError = false
@@ -22,7 +23,7 @@ final class OnArtsListViewStateHolder: ObservableObject {
 
 
 extension OnArtsListViewStateHolder: OnArtsListViewable {
-    func displayImages(_ arts: [ViewableArt]) {
+    func displayImages(_ arts: [OnArtsListView.ViewableArt]) {
         self.arts = arts
     }
 }

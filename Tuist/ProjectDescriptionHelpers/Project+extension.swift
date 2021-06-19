@@ -1,6 +1,10 @@
 import ProjectDescription
 
 extension Project {
+    private static func defaultDeploymentTarget() -> DeploymentTarget {
+        .iOS(targetVersion: "14.0", devices: [.ipad, .iphone])
+    }
+
     public static func defaultProject(projectName: String,
                                       product: Product,
                                       depedencies: [TargetDependency],
@@ -27,6 +31,7 @@ extension Project {
                     platform: .iOS,
                     product: product,
                     bundleId: "io.tuist.\(projectName)",
+                    deploymentTarget: defaultDeploymentTarget(),
                     infoPlist: "\(projectName)/Info.plist",
                     sources: ["\(projectName)/Sources/**"],
                     resources: resources,
@@ -38,6 +43,7 @@ extension Project {
                     platform: .iOS,
                     product: .unitTests,
                     bundleId: "io.tuist.\(testTargetName)",
+                    deploymentTarget: defaultDeploymentTarget(),
                     infoPlist: "\(testTargetName)/Info.plist",
                     sources: ["\(testTargetName)/Tests/**"],
                     actions: testActions,
@@ -128,6 +134,7 @@ extension Project {
             platform: .iOS,
             product: .framework,
             bundleId: "io.tuist.\(interfaceName)",
+            deploymentTarget: defaultDeploymentTarget(),
             infoPlist: "\(interfaceName)/Info.plist",
             sources: ["\(interfaceName)/Sources/**"],
             dependencies: featureDefaultDepedencies()
@@ -143,6 +150,7 @@ extension Project {
             platform: .iOS,
             product: .app,
             bundleId: "io.tuist.\(featureSampleName)",
+            deploymentTarget: defaultDeploymentTarget(),
             infoPlist: "\(featureSampleName)/Info.plist",
             sources: ["\(featureSampleName)/Sources/**"],
             resources: ["\(featureSampleName)/Resources/**/*"],

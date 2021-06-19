@@ -21,13 +21,13 @@ final class OnArtsListInteractor: Interacting {
     private let presenter: OnArtsListPresenting
     private let service: OnArtsListServicing
     private let logger: Logging
-    weak var coordinator: OnArtsListCoordinating?
-    weak var listener: OnArtsListListener?
     
     private var currentPage: GalleryPage?
     private var currentArts: [PixelArt] = []
     private var currentTips: [PixelArtTip] = []
     private var isFetchingNextPage = false
+    
+    weak var listener: OnArtsListListener?
     
     init(presenter: OnArtsListPresenting, service: OnArtsListServicing, logger: Logging) {
         self.presenter = presenter

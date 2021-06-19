@@ -6,7 +6,8 @@ enum PixelJointConstants {
 }
 
 struct OnArtsListResource: Resource {
-    let page: String
+    let page: Int
+    let section: ArtListSection
     
     var baseURL: URL {
         PixelJointConstants.baseURL
@@ -20,8 +21,18 @@ struct OnArtsListResource: Resource {
     }
     
     var urlParams: [QueryItem] {
-        [
-            QueryItem(name: "pg", value: page)
+        guard page > 1 else {
+            return [
+                QueryItem(name: "ob", value: section.identifier)
+            ]
+        }
+        
+        return [
+            QueryItem(name: "pg", value: String(page))
         ]
+    }
+    
+    var cookieAcceptPolicy: HTTPCookie.AcceptPolicy {
+        .always
     }
 }

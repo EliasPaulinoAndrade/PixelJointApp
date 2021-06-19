@@ -35,6 +35,7 @@ public final class StackViewController: UIViewController {
         
         if let verticalPriority = priority {
             viewController.view.setContentCompressionResistancePriority(verticalPriority, for: .vertical)
+            viewController.view.setContentHuggingPriority(.required, for: .vertical)
         }
         
         guard let fixedHeight = height else {

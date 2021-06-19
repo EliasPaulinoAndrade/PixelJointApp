@@ -8,4 +8,5 @@ public protocol Resource {
     var headerParams: [String: String]? { get }
     var bodyParams: BodyParams { get }
     var contentType: ContentType { get }
+    var cookieAcceptPolicy: HTTPCookie.AcceptPolicy { get }
 }

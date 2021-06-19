@@ -25,6 +25,25 @@ public enum ListingArtsStrings {
     /// Tap here to retry
     public static let tapToRetry = ListingArtsStrings.tr("ListingArts", "OnArtsList.TapToRetry")
   }
+
+  public enum OnSectionsList {
+    /// Close
+    public static let close = ListingArtsStrings.tr("ListingArts", "OnSectionsList.Close")
+    /// Highest Rating
+    public static let highestRating = ListingArtsStrings.tr("ListingArts", "OnSectionsList.HighestRating")
+    /// Most Favorites
+    public static let mostFavorites = ListingArtsStrings.tr("ListingArts", "OnSectionsList.MostFavorites")
+    /// Newest
+    public static let newest = ListingArtsStrings.tr("ListingArts", "OnSectionsList.Newest")
+    /// Pixel Joint
+    public static let pixelJoint = ListingArtsStrings.tr("ListingArts", "OnSectionsList.PixelJoint")
+    /// Please choose a section
+    public static let pleaseChooseSection = ListingArtsStrings.tr("ListingArts", "OnSectionsList.PleaseChooseSection")
+    /// Section Selection
+    public static let sectionSelection = ListingArtsStrings.tr("ListingArts", "OnSectionsList.SectionSelection")
+    /// Weekly Showcase
+    public static let weeklyShowcase = ListingArtsStrings.tr("ListingArts", "OnSectionsList.WeeklyShowcase")
+  }
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name

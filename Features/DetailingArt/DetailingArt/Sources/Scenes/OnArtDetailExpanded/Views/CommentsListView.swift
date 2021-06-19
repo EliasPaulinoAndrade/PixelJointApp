@@ -1,6 +1,7 @@
 import SwiftUI
 import NetworkingKitInterface
 import UIToolKit
+import SDWebImageSwiftUI
 
 struct CommentsListView: View {
     let comments: [Viewable.Comment]
@@ -13,7 +14,7 @@ struct CommentsListView: View {
                 VStack {
                     AsyncImage(resource: comment.image, provider: imageProvider,
                         imageProvider: { image in
-                            Image(uiImage: image)
+                            WebImage(url: URL(string: comment.image.baseURL.absoluteString + comment.image.path)!)
                         },
                         placeHolderProvider: {
                             ProgressView()

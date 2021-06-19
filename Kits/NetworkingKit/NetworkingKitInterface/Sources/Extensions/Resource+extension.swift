@@ -16,4 +16,8 @@ public extension Resource {
     var contentType: ContentType {
         return ContentType.jsonUTF8
     }
+    
+    var cookieAcceptPolicy: HTTPCookie.AcceptPolicy {
+        return .onlyFromMainDocumentDomain
+    }
 }

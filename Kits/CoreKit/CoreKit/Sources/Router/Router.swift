@@ -1,6 +1,15 @@
 import UIKit
 
+public protocol TabRouting {
+    func changeToTab(with identifier: String)
+    func add(coordinator: ViewableCoordinating, identifier: String)
+    func add(viewController: UIViewController, identifier: String)
+    func remove(coordinator: ViewableCoordinating)
+    func remove(viewController: UIViewController)
+}
+
 public protocol StackRouting {
+    func add(viewController: UIViewController, height: CGFloat?, priority: UILayoutPriority?)
     func add(coordinator: ViewableCoordinating, height: CGFloat?, priority: UILayoutPriority?)
     func remove(coordinator: ViewableCoordinating)
 }

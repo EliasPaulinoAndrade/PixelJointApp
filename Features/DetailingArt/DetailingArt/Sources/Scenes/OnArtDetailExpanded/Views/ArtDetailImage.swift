@@ -16,7 +16,6 @@ struct ArtDetailImage: View {
                     ZStack {
                         let url = URL(string: imageResource.baseURL.absoluteString + imageResource.path)
                        
-                    
                         Image(uiImage: image)
                             .resizable()
                             .opacity(0.5)
@@ -32,23 +31,6 @@ struct ArtDetailImage: View {
                         } else {
                             WebImage(url: url)
                         }
-                        
-                        
-//                        Image(uiImage: image)
-//                            .resizable()
-//                            .opacity(0.5)
-//                            .blur(radius: 20)
-//
-//                        let isBigImage = image.size.width > geometry.size.width ||
-//                                         image.size.height > geometry.size.height
-//
-//                        if isBigImage {
-//                            Image(uiImage: image)
-//                                .resizable()
-//                                .scaledToFit()
-//                        } else {
-//                            Image(uiImage: image)
-//                        }
                     }
                 }
             },
