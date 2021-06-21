@@ -12,6 +12,7 @@
 		0370702D62E550873843E28B /* DetailingArtBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55A15CF2A3D6763BB589E66 /* DetailingArtBuilder.swift */; };
 		0602521D46B8DA8C249D669D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4E6F456AAB9C5533094CD6B /* Comment.swift */; };
 		0727E499BA08B00ED3E35820 /* OnArtDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86296457C7043534A0CAAA41 /* OnArtDetailPresenterTests.swift */; };
+		07802AC5536761B8B0323DD6 /* Pods_DetailingArt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9DE65B3878C78810AA6C646 /* Pods_DetailingArt.framework */; };
 		0DE9A06335D112C30835BA67 /* DetailingArtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710356F59A5DB59EDCAE3D46 /* DetailingArtTests.swift */; };
 		0E0AF2F5A6A97E9FD637A9D6 /* OnArtDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEBBFBCFD4C8DF8B010F389 /* OnArtDetailInteractor.swift */; };
 		1EEE3050C00CFCEF5EA52B01 /* OnImageFullSizeViewStateHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089A05EA2C7D91B4606C389 /* OnImageFullSizeViewStateHolder.swift */; };
@@ -181,6 +182,7 @@
 		4B09A76CD2C9513853C8FA6F /* OnArtDetailMinimizedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnArtDetailMinimizedInteractor.swift; sourceTree = "<group>"; };
 		4BE23567212DA992B880BF83 /* DetailingArt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DetailingArt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		514CF61D4A57F0C7A1286284 /* OnArtDetailExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnArtDetailExpandedView.swift; sourceTree = "<group>"; };
+		51BFE04CDC6BDFC6BB7117A1 /* Pods-DetailingArt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetailingArt.debug.xcconfig"; path = "Target Support Files/Pods-DetailingArt/Pods-DetailingArt.debug.xcconfig"; sourceTree = "<group>"; };
 		54DBB2B78DA59257136F42C2 /* OnArtDetailExpandedLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnArtDetailExpandedLog.swift; sourceTree = "<group>"; };
 		59DDF8FBE2897A9F00B8A1EF /* OnArtDetailResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnArtDetailResource.swift; sourceTree = "<group>"; };
 		646BC29FFD4D2FC50333C672 /* OnArtDetailCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnArtDetailCoordinatorTests.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		B089A05EA2C7D91B4606C389 /* OnImageFullSizeViewStateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnImageFullSizeViewStateHolder.swift; sourceTree = "<group>"; };
 		B16741F9304A796ABAAAEF24 /* OnArtDetailExpandedViewStateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnArtDetailExpandedViewStateHolder.swift; sourceTree = "<group>"; };
 		B1A7E39F3E09EDB89AE2F62E /* Strings+DetailingArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+DetailingArt.swift"; sourceTree = "<group>"; };
+		B9DE65B3878C78810AA6C646 /* Pods_DetailingArt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DetailingArt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C188D8829F2C20A136A49BA6 /* OnArtDetailMinimizedViewStateHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnArtDetailMinimizedViewStateHolder.swift; sourceTree = "<group>"; };
 		C1A51A4AAFCA796D7A18C96D /* Bundle+DetailingArt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+DetailingArt.swift"; sourceTree = "<group>"; };
 		CDF204A1B23A99875F928190 /* Doubles.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doubles.generated.swift; sourceTree = "<group>"; };
@@ -217,6 +220,7 @@
 		DFA383E8089C8B58DBD14531 /* DetailingArtInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DetailingArtInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B44509816B7E040C2C8E9C /* OnArtDetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnArtDetailInteractorTests.swift; sourceTree = "<group>"; };
 		E153E7C2BF8232041B3D6C9F /* NetworkingKitInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkingKitInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2EF6CEF8F5531A73B2C0FBF /* Pods-DetailingArt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DetailingArt.release.xcconfig"; path = "Target Support Files/Pods-DetailingArt/Pods-DetailingArt.release.xcconfig"; sourceTree = "<group>"; };
 		E9466673C960B583DEDF82DC /* PixelArtInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelArtInfo.swift; sourceTree = "<group>"; };
 		EC824566E4343987C564CCEF /* OnArtDetailMinimizedInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnArtDetailMinimizedInteractorTests.swift; sourceTree = "<group>"; };
 		ECEBBFBCFD4C8DF8B010F389 /* OnArtDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnArtDetailInteractor.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 				8277EFA21A855D52345D5E6E /* NetworkingKitInterface.framework in Frameworks */,
 				81A00D086E15857FB3468B0F /* UIToolKit.framework in Frameworks */,
 				02517AAF82DCB08ED1232700 /* WebScrapingKitInterface.framework in Frameworks */,
+				07802AC5536761B8B0323DD6 /* Pods_DetailingArt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +313,16 @@
 				B16741F9304A796ABAAAEF24 /* OnArtDetailExpandedViewStateHolder.swift */,
 			);
 			path = OnArtDetailExpanded;
+			sourceTree = "<group>";
+		};
+		1F44A08BF3E6F0CE70431498 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51BFE04CDC6BDFC6BB7117A1 /* Pods-DetailingArt.debug.xcconfig */,
+				E2EF6CEF8F5531A73B2C0FBF /* Pods-DetailingArt.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../../Pods;
 			sourceTree = "<group>";
 		};
 		29BBB00E2484F91F436F5BA1 /* Resources */ = {
@@ -382,6 +397,7 @@
 		5F42342866AEDEC69AE36F68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9DE65B3878C78810AA6C646 /* Pods_DetailingArt.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -535,6 +551,7 @@
 				586697BE65DDB46704D1457F /* Project */,
 				5F42342866AEDEC69AE36F68 /* Frameworks */,
 				B2450CAF63B5267BB976A999 /* Products */,
+				1F44A08BF3E6F0CE70431498 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -585,6 +602,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6AB73560D6383E290AEF208 /* Build configuration list for PBXNativeTarget "DetailingArt" */;
 			buildPhases = (
+				3475C4B8A5AA8BAF2E91E778 /* [CP] Check Pods Manifest.lock */,
 				54B0AFDF467FA480A0AB613B /* Swift Lint */,
 				8E24EA6A36B529FC17091F93 /* Sources */,
 				2850806F8C748D173C81C631 /* Resources */,
@@ -727,6 +745,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3475C4B8A5AA8BAF2E91E778 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DetailingArt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		50EA7A4FBFC649F68328F112 /* Embed Precompiled Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -967,6 +1007,7 @@
 		};
 		1237CDABBFB7F146D4456782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2EF6CEF8F5531A73B2C0FBF /* Pods-DetailingArt.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1237,6 +1278,7 @@
 		};
 		DEF89D248CB627680DAFCE15 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51BFE04CDC6BDFC6BB7117A1 /* Pods-DetailingArt.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;

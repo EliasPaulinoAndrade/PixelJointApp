@@ -32,7 +32,8 @@ final class OnArtDetailExpandedBuilder: OnArtDetailExpandedBuildable {
             presenter: presenter,
             service: service,
             artDetailPublisher: artDetailPublisher,
-            logger: logger
+            logger: logger,
+            depedencies: externalDepedency
         )
         let coordinator = OnArtDetailExpandedCoordinator(
             fullSizeImageBuilder: OnImageFullSizeBuilder(externalDepedency: externalDepedency),

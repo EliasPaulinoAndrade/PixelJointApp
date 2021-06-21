@@ -5,17 +5,15 @@ import SDWebImageSwiftUI
 
 struct ArtDetailImage: View {
     let imageResource: AsyncImageResource
-    let imageProvider: AnyProvider<Data>
+    let imageProvider: AnyProvider<(data: Data, url: URL)>
         
     var body: some View {
         AsyncImage(
             resource: imageResource,
             provider: imageProvider,
-            imageProvider: { image in
+            imageProvider: { image, _, url in
                 GeometryReader { geometry in
                     ZStack {
-                        let url = URL(string: imageResource.baseURL.absoluteString + imageResource.path)
-                       
                         Image(uiImage: image)
                             .resizable()
                             .opacity(0.5)

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,20 +16,20 @@
 		3360330C915C9E5B3AB3271B /* TabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470F6B479FC79C3A5BB348BE /* TabRouter.swift */; };
 		3673E7E1D905FC70755E7128 /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44DF0C8C3178FB82915B603 /* TestKit.framework */; };
 		3F7B8CF3697FC918857643F1 /* AnimationState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F62333E0360F775D1E6756 /* AnimationState.swift */; };
+		6BD7B0D9D7AF42EBAFD2AA52 /* TabChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D985F5BF295DB9E37E0584 /* TabChild.swift */; };
 		75CF379A0B8ADE64AB2F759F /* PopTransitionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3044A8834C24DA63672065A5 /* PopTransitionState.swift */; };
 		78339018F43C6591DC534C9A /* PresentationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FD58F156C554897BD04512 /* PresentationInfo.swift */; };
 		820EF281E6D0825E764CCACE /* HierarchyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52723F81A683584838C84654 /* HierarchyRouter.swift */; };
 		AD5C8A1A675D3A99B471140B /* CoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF1AC8D03B8C8961347014F /* CoreKit.framework */; };
 		B810C52100AC3BFDF580F5EB /* Doubles.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235944D0C482E1A40F04F7B8 /* Doubles.generated.swift */; };
 		C15B4A6E9D7AF89522D04DB6 /* CoreKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47940E4AA4D6C9ACF6D4EBF /* CoreKitTests.swift */; };
+		C58B2CFB644914816E7B6BE4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACDDA3365D0A4A82149AC5 /* TabViewController.swift */; };
 		CE3285E7F841638B7813ACA1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE15A854DFCC2BCBDC63355 /* Coordinator.swift */; };
 		D1A8F930EBBBB59A3410248B /* Interacting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E6F85677F13D51EE904B68 /* Interacting.swift */; };
 		D4187E3384AA12DA54DEDF41 /* HierarchyRouterLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AAE03F64E749D73D20FB30 /* HierarchyRouterLog.swift */; };
 		DBB0E738CB4C9D0608E48503 /* StackRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153A94E33C2FF03A9AA4DE0D /* StackRouter.swift */; };
 		E207BA5B7A9B00EDB981E7DF /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1E1B36638B438D7F9BB101 /* Logging.swift */; };
 		E2260E7CEC6EBC9220BFC29C /* ModalRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3393D18CECBF9B06763AA571 /* ModalRouter.swift */; };
-		E3BA23C0267E73A8002E31B6 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BA23BF267E73A8002E31B6 /* TabViewController.swift */; };
-		E3BA23C2267E73CF002E31B6 /* TabChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BA23C1267E73CF002E31B6 /* TabChild.swift */; };
 		E580C86C7AF2F9708EE27B85 /* ViewCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A293F1033D7B207213777C1 /* ViewCodable.swift */; };
 		EF54D61AE5E3B1C0A0CBB14C /* ModalRouterLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA51DB483AEE035672C07CF /* ModalRouterLog.swift */; };
 		FCBD225C932893E14EB25C1E /* TabRouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1D3DCEB00141417CD7911 /* TabRouterView.swift */; };
@@ -77,6 +77,7 @@
 		26F96FBCA48444AA5FE7C38B /* HierarchyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchyState.swift; sourceTree = "<group>"; };
 		3044A8834C24DA63672065A5 /* PopTransitionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopTransitionState.swift; sourceTree = "<group>"; };
 		3393D18CECBF9B06763AA571 /* ModalRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalRouter.swift; sourceTree = "<group>"; };
+		34D985F5BF295DB9E37E0584 /* TabChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabChild.swift; sourceTree = "<group>"; };
 		3A3978C2ED49A1E4705095FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		3C7A12A7A7DBA8ED41105BE1 /* LogCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCategories.swift; sourceTree = "<group>"; };
 		41FD58F156C554897BD04512 /* PresentationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationInfo.swift; sourceTree = "<group>"; };
@@ -95,9 +96,8 @@
 		D44DF0C8C3178FB82915B603 /* TestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD1E1B36638B438D7F9BB101 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		DDA51DB483AEE035672C07CF /* ModalRouterLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalRouterLog.swift; sourceTree = "<group>"; };
-		E3BA23BF267E73A8002E31B6 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		E3BA23C1267E73CF002E31B6 /* TabChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabChild.swift; sourceTree = "<group>"; };
 		FAF7FA0140F8F2882FBD0A7B /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		FEACDDA3365D0A4A82149AC5 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +178,10 @@
 		4174648C153E01C7263141D9 /* Tab */ = {
 			isa = PBXGroup;
 			children = (
+				34D985F5BF295DB9E37E0584 /* TabChild.swift */,
 				470F6B479FC79C3A5BB348BE /* TabRouter.swift */,
 				B6B1D3DCEB00141417CD7911 /* TabRouterView.swift */,
-				E3BA23BF267E73A8002E31B6 /* TabViewController.swift */,
-				E3BA23C1267E73CF002E31B6 /* TabChild.swift */,
+				FEACDDA3365D0A4A82149AC5 /* TabViewController.swift */,
 			);
 			path = Tab;
 			sourceTree = "<group>";
@@ -317,6 +317,8 @@
 		D7F80DE66C28F0833825F7A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = D8FC987517002C0F6AD061BF /* Build configuration list for PBXProject "CoreKit" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -447,15 +449,15 @@
 				05D39F37EE44D8C6A0411D5B /* HierarchyState.swift in Sources */,
 				75CF379A0B8ADE64AB2F759F /* PopTransitionState.swift in Sources */,
 				E2260E7CEC6EBC9220BFC29C /* ModalRouter.swift in Sources */,
-				E3BA23C2267E73CF002E31B6 /* TabChild.swift in Sources */,
-				E3BA23C0267E73A8002E31B6 /* TabViewController.swift in Sources */,
 				EF54D61AE5E3B1C0A0CBB14C /* ModalRouterLog.swift in Sources */,
 				78339018F43C6591DC534C9A /* PresentationInfo.swift in Sources */,
 				25C0E48F692A763FE4D77E1E /* Router.swift in Sources */,
 				DBB0E738CB4C9D0608E48503 /* StackRouter.swift in Sources */,
 				1047BF0D60105F47F7335308 /* StackViewController.swift in Sources */,
+				6BD7B0D9D7AF42EBAFD2AA52 /* TabChild.swift in Sources */,
 				3360330C915C9E5B3AB3271B /* TabRouter.swift in Sources */,
 				FCBD225C932893E14EB25C1E /* TabRouterView.swift in Sources */,
+				C58B2CFB644914816E7B6BE4 /* TabViewController.swift in Sources */,
 				E580C86C7AF2F9708EE27B85 /* ViewCodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 import Foundation
 
 public protocol HasFileProvider {
-    var fileProvider: AnyProvider<Data> { get }
+    var fileProvider: AnyProvider<(data: Data, url: URL)> { get }
 }

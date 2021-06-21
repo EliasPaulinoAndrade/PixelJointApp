@@ -9,6 +9,7 @@ protocol OnArtDetailExpandedInteracting: AnyObject {
     func retrySelected()
     func retryLoadCommentsSelected()
     func commentDidAppear(_ commentID: String)
+    func linkSelected(url: URL)
 }
 
 protocol OnArtDetailExpandedListener: AnyObject {
@@ -22,11 +23,13 @@ private enum Constant {
 
 final class OnArtDetailExpandedInteractor: Interacting {
     typealias Log = OnArtDetailExpandedLog
+    typealias Depedencies = HasHTMLLinkOpenner
     
     private let presenter: OnArtDetailExpandedPresenting
     private let service: OnArtDetailExpandedServicing
     private let artDetailPublisher: ArtDetailInfoPublisher
     private let logger: Logging
+    private let depedencies: Depedencies
     private var cancellables: [AnyCancellable] = []
     private var currentArtInfo: PixelArtInfo?
     private var currentPageIndex: Int = Constant.firstPageIndex - 1
@@ -40,12 +43,14 @@ final class OnArtDetailExpandedInteractor: Interacting {
     init(presenter: OnArtDetailExpandedPresenting,
          service: OnArtDetailExpandedServicing,
          artDetailPublisher: ArtDetailInfoPublisher,
-         logger: Logging
+         logger: Logging,
+         depedencies: Depedencies
     ) {
         self.presenter = presenter
         self.artDetailPublisher = artDetailPublisher
         self.logger = logger
         self.service = service
+        self.depedencies = depedencies
     }
     
     func didStart() {
@@ -164,6 +169,10 @@ extension OnArtDetailExpandedInteractor: OnArtDetailExpandedInteracting {
         }
         
         getNextCommentsPage(artURL: currentArtUrl)
+    }
+    
+    func linkSelected(url: URL) {
+        depedencies.linkOpenned.open(link: url)
     }
 }
 

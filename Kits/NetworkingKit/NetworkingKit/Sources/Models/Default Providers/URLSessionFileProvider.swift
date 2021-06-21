@@ -2,7 +2,7 @@ import Foundation
 import NetworkingKitInterface
 
 final public class URLSessionFileProvider: Provider {
-    public typealias ReturnType = Data
+    public typealias ReturnType = CompleteFileProviderReturn
     
     private let urlSession: URLSession
     
@@ -11,7 +11,8 @@ final public class URLSessionFileProvider: Provider {
     }
    
     @discardableResult
-    public func request(resource: Resource, completion: @escaping (Result<Data, Error>) -> Void) -> CancellableTask? {
+    public func request(resource: Resource,
+                        completion: @escaping (Result<CompleteFileProviderReturn, Error>) -> Void) -> CancellableTask? {
         guard let routeRequestURL = resource.completeURL else {
             completion(.failure(NetworkError.wrongURL(resource)))
             return nil
@@ -29,7 +30,7 @@ final public class URLSessionFileProvider: Provider {
                 return
             }
             
-            completion(.success(fileData))
+            completion(.success(CompleteFileProviderReturn(data: fileData, url: responseUrl)))
         }
         
         downloadTask.resume()

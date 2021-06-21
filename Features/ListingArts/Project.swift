@@ -7,8 +7,15 @@ let project = Project.featureProject(
     depedencies: [
         .project(target: "NetworkingKitInterface", path: "../../Kits/NetworkingKit"),
         .project(target: "WebScrapingKitInterface", path: "../../Kits/WebScrapingKit"),
-        .project(target: "UIToolKit", path: "../../Kits/UIToolKit")
+        .project(target: "UIToolKit", path: "../../Kits/UIToolKit"),
+        .cocoapods(path: "./../../.")
     ],
+//    packages: [
+//        .remote(
+//            url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git",
+//            requirement: .exact("2.0.2")
+//        )
+//    ],
     hasInterface: true
 )
 

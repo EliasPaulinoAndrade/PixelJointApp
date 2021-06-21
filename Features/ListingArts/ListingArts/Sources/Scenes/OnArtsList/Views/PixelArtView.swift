@@ -1,7 +1,6 @@
 import SwiftUI
 import UIToolKit
 import NetworkingKitInterface
-import NukeUI
 import SDWebImageSwiftUI
 
 private enum Constant {
@@ -10,13 +9,13 @@ private enum Constant {
 
 struct PixelArtView: View {
     let art: OnArtsListView.ViewableArt
-    let imageProvider: AnyProvider<Data>
+    let imageProvider: AnyProvider<(data: Data, url: URL)>
 
     var body: some View {
         VStack {
             AsyncImage(resource: art.resource, provider: imageProvider,
-                imageProvider: { image in
-                    imageProvider(for: image, url: URL(string: art.resource.baseURL.absoluteString + art.resource.path)!)
+                imageProvider: { image, _, url in
+                    imageProvider(for: image, url: url)
                 },
                 placeHolderProvider: {
                     Rectangle()

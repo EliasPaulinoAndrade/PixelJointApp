@@ -18,7 +18,7 @@ struct OnImageFullSizeView: View {
     private typealias Strings = DetailingArtStrings.OnImageFullSize
     
     @ObservedObject private var stateHolder: OnImageFullSizeViewStateHolder
-    private let imageProvider: AnyProvider<Data>
+    private let imageProvider: AnyProvider<(data: Data, url: URL)>
 
     var body: some View {
         if let imageResource = stateHolder.imageResource {
@@ -37,7 +37,7 @@ struct OnImageFullSizeView: View {
         }
     }
     
-    init(stateHolder: OnImageFullSizeViewStateHolder, imageProvider: AnyProvider<Data>) {
+    init(stateHolder: OnImageFullSizeViewStateHolder, imageProvider: AnyProvider<(data: Data, url: URL)>) {
         self.stateHolder = stateHolder
         self.imageProvider = imageProvider
     }
@@ -68,8 +68,8 @@ struct OnImageFullSizeView: View {
             AsyncImage(
                 resource: resource,
                 provider: imageProvider,
-                imageProvider: { image in
-                    Image(uiImage: image)
+                imageProvider: { image, _, url in
+                    WebImage(url: url)
                         .interpolation(.none)
                         .antialiased(false)
                         .resizable()

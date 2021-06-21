@@ -19,7 +19,6 @@
 		4D824F1001E030581FA7A696 /* String+HTMLDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5478F926485BC4D68A98646 /* String+HTMLDecodable.swift */; };
 		4E582E6A409BF87844124EF5 /* NetworkingKitInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F15087AC8F785499D1D2911 /* NetworkingKitInterface.framework */; };
 		4E5C5F0F6998503C3E4D7D59 /* WebScrapingKitInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD52948851B85983C0D0D79 /* WebScrapingKitInterface.framework */; };
-		53300E59FE48B8EE18D88E2F /* HasHTMLProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A919FA6B0864453472C699 /* HasHTMLProvider.swift */; };
 		6478A82C47864F00B6F9E121 /* HTMLDecoderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8812989663A6FBFDDE7D3BF /* HTMLDecoderError.swift */; };
 		67F4E0E47AEF9D5C70FCAE2D /* CoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BE5BA61BEADFFD7A481354F /* CoreKit.framework */; };
 		6C0EE45C7D877D3298883DB7 /* DefaultDecodeResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA29A22FFEA8BFCBE08E814 /* DefaultDecodeResult.swift */; };
@@ -90,7 +89,6 @@
 		1968D9FA267FA68A146C9176 /* DecodeResulting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeResulting.swift; sourceTree = "<group>"; };
 		1F15087AC8F785499D1D2911 /* NetworkingKitInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkingKitInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		285DB6303517A74851199D24 /* Element+searchElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Element+searchElements.swift"; sourceTree = "<group>"; };
-		35A919FA6B0864453472C699 /* HasHTMLProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasHTMLProvider.swift; sourceTree = "<group>"; };
 		385862C45F5E8D5420675776 /* HTMLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLParser.swift; sourceTree = "<group>"; };
 		5FD5EF201840AE3CE6FE867F /* WebScrapingKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebScrapingKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BE5BA61BEADFFD7A481354F /* CoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,7 +242,6 @@
 				CBAEAE92598D81D9E15378D9 /* Extensions */,
 				828109FEAA2883645BA4263E /* DecodeResult.swift */,
 				1968D9FA267FA68A146C9176 /* DecodeResulting.swift */,
-				35A919FA6B0864453472C699 /* HasHTMLProvider.swift */,
 				B66BF6683EB8D2539775B16C /* HTMLContaining.swift */,
 				11B098ACD723ED6A3E1126CD /* HTMLDecodable.swift */,
 				B8812989663A6FBFDDE7D3BF /* HTMLDecoderError.swift */,
@@ -487,7 +484,6 @@
 				F6C1850A4BF26ECE5D406AEE /* HTMLContaining.swift in Sources */,
 				F96D7199B0A29C8B8E25CC20 /* HTMLDecodable.swift in Sources */,
 				6478A82C47864F00B6F9E121 /* HTMLDecoderError.swift in Sources */,
-				53300E59FE48B8EE18D88E2F /* HasHTMLProvider.swift in Sources */,
 				461607EDDE80F7B91AB01BA3 /* PathElement.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

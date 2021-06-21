@@ -18,8 +18,10 @@ struct ListingArtsProxyBuilder: ListingArtsBuildable {
 }
 
 private struct ListingArtsDepedency: ListingArtsDepedencing {
-    var fileProvider: AnyProvider<Data> {
-        URLSessionFileProvider(urlSession: .shared).includeCaching
+    var fileProvider: AnyProvider<(data: Data, url: URL)> {
+        URLSessionFileProvider(urlSession: .shared).map {
+            ($0.data, $0.url)
+        }.includeCaching
     }
     
     func htmlProvider<T: HTMLDecodable>(type: T.Type) -> AnyProvider<T> {

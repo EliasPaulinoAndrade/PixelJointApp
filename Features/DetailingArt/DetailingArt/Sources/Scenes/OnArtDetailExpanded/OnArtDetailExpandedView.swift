@@ -2,7 +2,6 @@ import UIKit
 import SwiftUI
 import NetworkingKitInterface
 import UIToolKit
-import WebKit
 
 enum Viewable {
     struct Accessory: Identifiable {
@@ -31,7 +30,7 @@ struct OnArtDetailExpandedView: View {
     private typealias Strings = DetailingArtStrings.OnArtDetailExpanded
     
     @ObservedObject private var stateHolder: OnArtDetailExpandedViewStateHolder
-    private let imageProvider: AnyProvider<Data>
+    private let imageProvider: AnyProvider<(data: Data, url: URL)>
     
     var body: some View {
         ZStack {
@@ -52,9 +51,21 @@ struct OnArtDetailExpandedView: View {
                                         stateHolder.isFullSizeButtonOnHeader = false
                                     }
                                 }
-                            ArtDetailInformationView(artDetail: artDetail)
+                            ArtDetailInformationView(
+                                artDetail: artDetail,
+                                onUserNavigateAction: stateHolder.interactor?.linkSelected
+                            )
                             CommentsListView(comments: stateHolder.comments, imageProvider: imageProvider)
                                 .onCommentAppear(perform: stateHolder.interactor?.commentDidAppear)
+                            FooterEmptyStateView(
+                                isLoading: $stateHolder.isShowingFooterLoading,
+                                isShowingError: $stateHolder.isShowingFooterError,
+                                hasNoMoreContent: $stateHolder.hasNoMorePages,
+                                errorTitle: Strings.couldNotLoadComments,
+                                retryTitle: Strings.tapToRetry,
+                                noContentTitle: Strings.noMoreComments,
+                                retryAction: stateHolder.interactor?.retryLoadCommentsSelected
+                            )
                             Spacer()
                         }.padding([.horizontal, .bottom], 8)
                          .padding(.top, 80)
@@ -87,7 +98,7 @@ struct OnArtDetailExpandedView: View {
          .ignoresSafeArea()
     }
     
-    init(stateHolder: OnArtDetailExpandedViewStateHolder, imageProvider: AnyProvider<Data>) {
+    init(stateHolder: OnArtDetailExpandedViewStateHolder, imageProvider: AnyProvider<(data: Data, url: URL)>) {
         self.stateHolder = stateHolder
         self.imageProvider = imageProvider
     }

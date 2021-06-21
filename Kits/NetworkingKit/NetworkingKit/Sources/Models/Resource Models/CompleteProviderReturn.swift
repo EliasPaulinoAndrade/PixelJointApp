@@ -1,6 +1,6 @@
 import Foundation
 
 public struct CompleteProviderReturn {
-    let headers: [AnyHashable: Any]
-    public var data: Data
+    public let headers: [AnyHashable: Any]
+    public let data: Data
 }

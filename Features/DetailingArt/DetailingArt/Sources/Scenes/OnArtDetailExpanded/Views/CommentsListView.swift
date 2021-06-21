@@ -5,7 +5,7 @@ import SDWebImageSwiftUI
 
 struct CommentsListView: View {
     let comments: [Viewable.Comment]
-    let imageProvider: AnyProvider<Data>
+    let imageProvider: AnyProvider<(data: Data, url: URL)>
     var onCommentAppearAction: ((_ identifier: String) -> Void)?
     
     var body: some View {
@@ -13,8 +13,8 @@ struct CommentsListView: View {
             HStack(spacing: 8) {
                 VStack {
                     AsyncImage(resource: comment.image, provider: imageProvider,
-                        imageProvider: { image in
-                            WebImage(url: URL(string: comment.image.baseURL.absoluteString + comment.image.path)!)
+                        imageProvider: { _, _, url in
+                            WebImage(url: url)
                         },
                         placeHolderProvider: {
                             ProgressView()

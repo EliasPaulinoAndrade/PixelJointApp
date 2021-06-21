@@ -19,8 +19,8 @@ struct OnArtsListView: View {
     private typealias Strings = ListingArtsStrings.OnArtsList
     
     @ObservedObject private var stateHolder: OnArtsListViewStateHolder
-    private let imageProvider: AnyProvider<Data>
-    private let columns = [GridItem(.adaptive(minimum: Constant.itemSize, maximum: Constant.itemSize), spacing: 5)]
+    private let imageProvider: AnyProvider<(data: Data, url: URL)>
+    private let columns = [GridItem(.adaptive(minimum: Constant.itemSize, maximum: Constant.itemSize))]
     
     var body: some View {
         Group {
@@ -62,7 +62,7 @@ struct OnArtsListView: View {
         }.background(Color(UIToolKitAsset.darkBackground.color))
     }
     
-    init(stateHolder: OnArtsListViewStateHolder, imageProvider: AnyProvider<Data>) {
+    init(stateHolder: OnArtsListViewStateHolder, imageProvider: AnyProvider<(data: Data, url: URL)>) {
         self.stateHolder = stateHolder
         self.imageProvider = imageProvider
     }

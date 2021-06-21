@@ -34,7 +34,6 @@ struct HTMLText: UIViewRepresentable {
             htmlLabel.attributedText = attributedString
             htmlLabel.font = font
             htmlLabel.textColor = color
-            htmlLabel.preferredMaxLayoutWidth = 0.9 * UIScreen.main.bounds.width
         }
     }
 }

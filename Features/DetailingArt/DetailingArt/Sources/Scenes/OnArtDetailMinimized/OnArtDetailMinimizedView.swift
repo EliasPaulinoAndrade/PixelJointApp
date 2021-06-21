@@ -19,7 +19,7 @@ struct OnArtDetailMinimizedView: View {
     private typealias Strings = DetailingArtStrings.OnArtDetailMinimized
     
     @ObservedObject private var stateHolder: OnArtDetailMinimizedViewStateHolder
-    private let imageProvider: AnyProvider<Data>
+    private let imageProvider: AnyProvider<(data: Data, url: URL)>
     
     var body: some View {
         HStack {
@@ -46,7 +46,7 @@ struct OnArtDetailMinimizedView: View {
         }.background(Color(UIToolKitAsset.extraDark.color))
     }
     
-    init(stateHolder: OnArtDetailMinimizedViewStateHolder, imageProvider: AnyProvider<Data>) {
+    init(stateHolder: OnArtDetailMinimizedViewStateHolder, imageProvider: AnyProvider<(data: Data, url: URL)>) {
         self.stateHolder = stateHolder
         self.imageProvider = imageProvider
     }
@@ -57,7 +57,7 @@ struct OnArtDetailMinimizedView: View {
             AsyncImage(
                 resource: artDetail.imageResource,
                 provider: imageProvider,
-                imageProvider: { image in
+                imageProvider: { image, _, _ in
                     Image(uiImage: image)
                         .resizable()
                         .scaledToFit()

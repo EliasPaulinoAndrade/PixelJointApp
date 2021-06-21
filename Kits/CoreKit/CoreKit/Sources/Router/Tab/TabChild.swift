@@ -2,7 +2,6 @@ import UIKit
 import SwiftUI
 
 struct TabChild: Identifiable {
-    // swiftlint:disable:next identifier_name
     let id: String
     let view: TabChildViewController
 }
