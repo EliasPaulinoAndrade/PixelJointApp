@@ -22,6 +22,8 @@ public enum DetailingArtStrings {
     public static let couldNotLoadArt = DetailingArtStrings.tr("DetailingArt", "OnArtDetailExpanded.CouldNotLoadArt")
     /// Could not load more comments
     public static let couldNotLoadComments = DetailingArtStrings.tr("DetailingArt", "OnArtDetailExpanded.CouldNotLoadComments")
+    /// There are no comments
+    public static let noComments = DetailingArtStrings.tr("DetailingArt", "OnArtDetailExpanded.NoComments")
     /// There are no more comments
     public static let noMoreComments = DetailingArtStrings.tr("DetailingArt", "OnArtDetailExpanded.NoMoreComments")
     /// See Detail

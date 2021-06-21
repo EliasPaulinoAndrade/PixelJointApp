@@ -63,7 +63,7 @@ struct OnArtDetailExpandedView: View {
                                 hasNoMoreContent: $stateHolder.hasNoMorePages,
                                 errorTitle: Strings.couldNotLoadComments,
                                 retryTitle: Strings.tapToRetry,
-                                noContentTitle: Strings.noMoreComments,
+                                noContentTitle: $stateHolder.hasNoMorePagesTitle,
                                 retryAction: stateHolder.interactor?.retryLoadCommentsSelected
                             )
                             Spacer()

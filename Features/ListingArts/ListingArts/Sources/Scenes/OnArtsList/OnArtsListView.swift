@@ -53,7 +53,7 @@ struct OnArtsListView: View {
                             hasNoMoreContent: $stateHolder.hasNoMorePages,
                             errorTitle: Strings.couldNotLoadMore,
                             retryTitle: Strings.tapToRetry,
-                            noContentTitle: Strings.noMoreArts,
+                            noContentTitle: .constant(Strings.noMoreArts),
                             retryAction: stateHolder.interactor?.retrySelected
                         ).padding(.all, 8)
                     }

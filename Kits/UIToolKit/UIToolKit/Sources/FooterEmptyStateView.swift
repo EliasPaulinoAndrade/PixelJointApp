@@ -6,7 +6,7 @@ public struct FooterEmptyStateView: View {
     @Binding var hasNoMoreContent: Bool
     let errorTitle: String
     let retryTitle: String
-    let noContentTitle: String
+    @Binding var noContentTitle: String
     let retryAction: (() -> Void)?
     var onErrorAppearCompletion: (() -> Void)?
     
@@ -44,14 +44,14 @@ public struct FooterEmptyStateView: View {
                 hasNoMoreContent: Binding<Bool>,
                 errorTitle: String,
                 retryTitle: String,
-                noContentTitle: String,
+                noContentTitle: Binding<String>,
                 retryAction: (() -> Void)?) {
         self._isLoading = isLoading
         self._isShowingError = isShowingError
         self._hasNoMoreContent = hasNoMoreContent
         self.errorTitle = errorTitle
         self.retryTitle = retryTitle
-        self.noContentTitle = noContentTitle
+        self._noContentTitle = noContentTitle
         self.retryAction = retryAction
     }
     

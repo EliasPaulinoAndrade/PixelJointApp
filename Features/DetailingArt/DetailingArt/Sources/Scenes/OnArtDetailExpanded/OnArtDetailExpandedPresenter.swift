@@ -15,10 +15,14 @@ protocol OnArtDetailExpandedPresenting: AnyObject {
     func hideFooterError()
     func hideFooterLoading()
     func presentNoMorePages()
+    func presentNoComments()
 }
 
 final class OnArtDetailExpandedPresenter {
+    private typealias Strings = DetailingArtStrings.OnArtDetailExpanded
+    
     private let view: OnArtDetailExpandedViewable
+    
     init(view: OnArtDetailExpandedViewable) {
         self.view = view
     }
@@ -40,8 +44,12 @@ final class OnArtDetailExpandedPresenter {
 }
 
 extension OnArtDetailExpandedPresenter: OnArtDetailExpandedPresenting {
+    func presentNoComments() {
+        view.showNoMoreContent(text: Strings.noComments)
+    }
+    
     func presentNoMorePages() {
-        view.hasNoMorePages = true
+        view.showNoMoreContent(text: Strings.noMoreComments)
     }
     
     func presentFooterLoading() {

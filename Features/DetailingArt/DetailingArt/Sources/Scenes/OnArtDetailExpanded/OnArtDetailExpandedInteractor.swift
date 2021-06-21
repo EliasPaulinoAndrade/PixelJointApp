@@ -118,6 +118,10 @@ final class OnArtDetailExpandedInteractor: Interacting {
         currentCommentsPage = commentsPage
         presenter.presentComments(currentComments)
         logger.log(Log.showingPage(pageIndex: currentPageIndex), LogicalLog.message)
+        
+        if currentPageIndex == Constant.firstPageIndex && commentsPage.comments.isEmpty {
+            presenter.presentNoComments()
+        }
     }
     
     private func updateState(artInfo: PixelArtInfo) {

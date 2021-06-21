@@ -6,10 +6,10 @@ protocol OnArtDetailExpandedViewable: AnyObject {
     var isShowingFooterError: Bool { get set }
     var isShowingFooterLoading: Bool { get set }
     var isFullSizeButtonOnHeader: Bool { get set }
-    var hasNoMorePages: Bool { get set }
     
     func showComments(_ comments: [Viewable.Comment])
     func showArtDetail(_ artDetail: Viewable.ArtDetail)
+    func showNoMoreContent(text: String)
 }
 
 final class OnArtDetailExpandedViewStateHolder: ObservableObject {
@@ -22,6 +22,7 @@ final class OnArtDetailExpandedViewStateHolder: ObservableObject {
     @Published var isShowingFooterLoading = false
     @Published var isFullSizeButtonOnHeader = false
     @Published var comments: [Viewable.Comment] = []
+    @Published var hasNoMorePagesTitle = ""
     @Published var hasNoMorePages = false
 }
 
@@ -32,5 +33,10 @@ extension OnArtDetailExpandedViewStateHolder: OnArtDetailExpandedViewable {
     
     func showComments(_ comments: [Viewable.Comment]) {
         self.comments = comments
+    }
+    
+    func showNoMoreContent(text: String) {
+        hasNoMorePagesTitle = text
+        hasNoMorePages = true
     }
 }
