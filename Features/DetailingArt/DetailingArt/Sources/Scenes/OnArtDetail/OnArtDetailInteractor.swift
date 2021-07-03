@@ -64,6 +64,7 @@ final class OnArtDetailInteractor: Interacting {
     }
     
     private func listenDetailExpand() {
+        //TODO: fix this capture list
         openDetailPublisher.sink { [expandDetail, showMinimizedDetail, getArtDetail, updateArtLink] artURL in
             showMinimizedDetail()
             expandDetail()

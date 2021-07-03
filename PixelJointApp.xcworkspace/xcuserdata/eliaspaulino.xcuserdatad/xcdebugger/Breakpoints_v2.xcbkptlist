@@ -148,5 +148,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EDB28F3F-93F6-4032-BFF1-74204D9EC2A0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Features/DetailingArt/DetailingArt/Sources/Scenes/OnArtDetail/OnArtDetailService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "getArtDetail(link:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EDB28F3F-93F6-4032-BFF1-74204D9EC2A0 - 57a4fceca6fc8463"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DetailingArt.OnArtDetailService.getArtDetail(link: Foundation.URL, completion: (Swift.Result&lt;DetailingArt.PixelArtDetail, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DetailingArt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eliaspaulino/Projects/PixelJoint/Features/DetailingArt/DetailingArt/Sources/Scenes/OnArtDetail/OnArtDetailService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  uuid = "EDB28F3F-93F6-4032-BFF1-74204D9EC2A0 - ede26d6eb7b446ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;DetailingArt.PixelArtDetail, Swift.Error&gt;) -&gt; () in DetailingArt.OnArtDetailService.getArtDetail(link: Foundation.URL, completion: (Swift.Result&lt;DetailingArt.PixelArtDetail, Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "DetailingArt"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eliaspaulino/Projects/PixelJoint/Features/DetailingArt/DetailingArt/Sources/Scenes/OnArtDetail/OnArtDetailService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "175">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

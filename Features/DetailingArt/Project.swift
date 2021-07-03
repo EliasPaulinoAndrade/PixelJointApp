@@ -10,5 +10,9 @@ let project = Project.featureProject(
         .project(target: "UIToolKit", path: "../../Kits/UIToolKit"),
         .cocoapods(path: "./../../.")
     ],
-    hasInterface: true
+    hasInterface: true,
+    sampleDepedencies: [
+        .project(target: "NetworkingKit", path: "../../Kits/NetworkingKit"),
+        .project(target: "WebScrapingKit", path: "../../Kits/WebScrapingKit")
+    ]
 )
