@@ -12,14 +12,12 @@ import Combine
 struct DetailingArtProxyBuilder: DetailingArtBuildable {
     func makeDetailingArt(view: UIViewController,
                           openDetailPublisher: AnyPublisher<URL, Never>,
-                          stackRouter: StackRouting,
-                          listener: DetailingArtListener) -> Coordinating {
+                          stackRouter: StackRouting) -> Coordinating {
         DetailingArtBuilder(externalDepedency: DetailingArtDepedency())
             .makeDetailingArt(
                 view: view,
                 openDetailPublisher: openDetailPublisher,
-                stackRouter: stackRouter,
-                listener: listener
+                stackRouter: stackRouter
             )
     }
 }

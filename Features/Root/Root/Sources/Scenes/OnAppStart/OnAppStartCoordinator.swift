@@ -6,8 +6,7 @@ import Combine
 
 protocol OnAppStartCoordinating: AnyObject {
     func openListingArts(listener: ListingArtsListener)
-    func openDetailingArt(openDetailPublisher: AnyPublisher<URL, Never>, listener: DetailingArtListener)
-    func closeDetailingArt()
+    func openDetailingArt(openDetailPublisher: AnyPublisher<URL, Never>)
 }
 
 final class OnAppStartCoordinator: ViewableCoordinator {
@@ -36,18 +35,13 @@ extension OnAppStartCoordinator: OnAppStartCoordinating {
         stackRouter.add(coordinator: listingArts, height: nil, priority: nil)
     }
     
-    func openDetailingArt(openDetailPublisher: AnyPublisher<URL, Never>, listener: DetailingArtListener) {
+    func openDetailingArt(openDetailPublisher: AnyPublisher<URL, Never>) {
         let detailingArt = detailingArtBuilder.makeDetailingArt(
             view: viewController,
             openDetailPublisher: openDetailPublisher,
-            stackRouter: stackRouter,
-            listener: listener
+            stackRouter: stackRouter
         )
         
         attach(detailingArt)
-    }
-    
-    func closeDetailingArt() {
-        deattachLast()
     }
 }

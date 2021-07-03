@@ -17,11 +17,14 @@ final class OnArtsListService: OnArtsListServicing {
     func getArts(page: Int, completion: @escaping (Result<GalleryPage, Error>) -> Void) {
         let section = self.section
         let provider = self.provider
+        
         provider.request(resource: OnArtsListResource(page: 1, section: section)) { result in
             guard case .success = result else {
-                return completion(result.map { gallery in
-                    GalleryPage(gallery: gallery, pageIndex: page)
-                })
+                return DispatchQueue.main.async {
+                    completion(result.map { gallery in
+                        GalleryPage(gallery: gallery, pageIndex: page)
+                    }
+                )}
             }
             provider.request(resource: OnArtsListResource(page: page, section: section)) { result in
                 DispatchQueue.main.async {

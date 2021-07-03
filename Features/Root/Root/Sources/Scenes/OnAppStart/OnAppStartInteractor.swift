@@ -46,15 +46,8 @@ extension OnAppStartInteractor: ListingArtsListener {
         }
         isDetailOpened = true
         coordinator?.openDetailingArt(
-            openDetailPublisher: expandDetailPublisher.eraseToAnyPublisher(),
-            listener: self
+            openDetailPublisher: expandDetailPublisher.eraseToAnyPublisher()
         )
         expandDetailPublisher.send(link)
-    }
-}
-
-extension OnAppStartInteractor: DetailingArtListener {
-    func userClosed() {
-        coordinator?.closeDetailingArt()
     }
 }

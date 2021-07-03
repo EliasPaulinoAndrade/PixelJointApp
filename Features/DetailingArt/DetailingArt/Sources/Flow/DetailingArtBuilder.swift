@@ -13,10 +13,9 @@ public struct DetailingArtBuilder: DetailingArtBuildable {
     
     public func makeDetailingArt(view: UIViewController,
                                  openDetailPublisher: AnyPublisher<URL, Never>,
-                                 stackRouter: StackRouting,
-                                 listener: DetailingArtListener) -> Coordinating {
+                                 stackRouter: StackRouting) -> Coordinating {
         
         OnArtDetailBuilder(view: view, externalDepedency: externalDepedency)
-            .makeOnArtDetail(openDetailPublisher: openDetailPublisher, stackRouter: stackRouter, listener: listener)
+            .makeOnArtDetail(openDetailPublisher: openDetailPublisher, stackRouter: stackRouter)
     }
 }

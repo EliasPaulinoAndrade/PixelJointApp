@@ -19,13 +19,11 @@ private struct RootExternalDepedency: RootExternalDepedencing {
 private struct RootExternalBuilder: RootExternalBuildable {
     func makeDetailingArt(view: UIViewController,
                           openDetailPublisher: AnyPublisher<URL, Never>,
-                          stackRouter: StackRouting,
-                          listener: DetailingArtListener) -> Coordinating {
+                          stackRouter: StackRouting) -> Coordinating {
         DetailingArtProxyBuilder().makeDetailingArt(
             view: view,
             openDetailPublisher: openDetailPublisher,
-            stackRouter: stackRouter,
-            listener: listener
+            stackRouter: stackRouter
         )
     }
     

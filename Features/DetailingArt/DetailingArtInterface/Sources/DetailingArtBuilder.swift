@@ -6,6 +6,5 @@ import Combine
 public protocol DetailingArtBuildable {
     func makeDetailingArt(view: UIViewController,
                           openDetailPublisher: AnyPublisher<URL, Never>,
-                          stackRouter: StackRouting,
-                          listener: DetailingArtListener) -> Coordinating
+                          stackRouter: StackRouting) -> Coordinating
 }

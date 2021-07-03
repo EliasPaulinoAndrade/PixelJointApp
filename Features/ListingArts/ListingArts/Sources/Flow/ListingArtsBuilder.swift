@@ -11,7 +11,7 @@ public struct ListingArtsBuilder: ListingArtsBuildable {
     }
     
     public func makeListingArts(listener: ListingArtsListener) -> ViewableCoordinating {
-        return OnSectionsListBuilder(externalDepedency: externalDepedency)
+        OnSectionsListBuilder(externalDepedency: externalDepedency)
             .makeOnSectionsList(listener: listener)
     }
 }

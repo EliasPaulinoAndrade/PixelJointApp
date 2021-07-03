@@ -4,8 +4,7 @@ import Combine
 
 protocol OnArtDetailBuildable {
     func makeOnArtDetail(openDetailPublisher: AnyPublisher<URL, Never>,
-                         stackRouter: StackRouting,
-                         listener: OnArtDetailListener) -> Coordinating
+                         stackRouter: StackRouting) -> Coordinating
 }
 
 final class OnArtDetailBuilder: OnArtDetailBuildable {
@@ -18,8 +17,7 @@ final class OnArtDetailBuilder: OnArtDetailBuildable {
     }
 
     func makeOnArtDetail(openDetailPublisher: AnyPublisher<URL, Never>,
-                         stackRouter: StackRouting,
-                         listener: OnArtDetailListener) -> Coordinating {
+                         stackRouter: StackRouting) -> Coordinating {
         let logger = ConsoleLogger()
         let interactor = OnArtDetailInteractor(
             service: OnArtDetailService(provider: externalDepedency.htmlProvider(type: PixelArtDetail.self)),
@@ -35,7 +33,6 @@ final class OnArtDetailBuilder: OnArtDetailBuildable {
             interactor: interactor
         )
         interactor.coordinator = coordinator
-        interactor.listener = listener
         modalRouter.delegate = coordinator
         return coordinator
     }

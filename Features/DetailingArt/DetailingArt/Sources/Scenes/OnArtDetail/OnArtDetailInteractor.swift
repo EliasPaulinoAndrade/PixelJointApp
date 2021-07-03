@@ -3,7 +3,6 @@ import CoreKit
 import Combine
 import DetailingArtInterface
 
-typealias OnArtDetailListener = DetailingArtListener
 typealias ArtDetailInfoPublisher = AnyPublisher<Result<PixelArtInfo, Error>, Never>
 
 final class OnArtDetailInteractor: Interacting {
@@ -20,7 +19,6 @@ final class OnArtDetailInteractor: Interacting {
     private var artURL: URL?
     
     weak var coordinator: OnArtDetailCoordinating?
-    weak var listener: OnArtDetailListener?
     
     init(service: OnArtDetailServicing, openDetailPublisher: AnyPublisher<URL, Never>, logger: Logging) {
         self.service = service

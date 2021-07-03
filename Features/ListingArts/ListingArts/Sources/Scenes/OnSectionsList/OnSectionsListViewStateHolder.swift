@@ -14,7 +14,7 @@ final class OnSectionsListViewStateHolder: ObservableObject {
     @Published var currentSection: OnSectionsListView.Section = OnSectionsListView.Section(
         id: "",
         title: "",
-        systemImage: ""
+        systemImage: "burn"
     )
     @Published var isShowingSectionSelection = false
 }

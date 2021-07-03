@@ -91,14 +91,16 @@ extension Project {
                                       packages: [Package] = [],
                                       hasSample: Bool = true,
                                       hasInterface: Bool = false,
-                                      extraTargets: [Target] = []) -> Project {
+                                      extraTargets: [Target] = [],
+                                      sampleDepedencies: [TargetDependency] = []) -> Project {
         let featureDepedencies = depedencies + featureDefaultDepedencies()
         let interfaceTarget = interfaceTarget(featureName: featureName)
         let interfaceDepedency = TargetDependency.target(name: interfaceTarget.name)
         let featureInterfaceDepedency = hasInterface ? [interfaceDepedency] : []
         let sampleTarget = sampleTarget(
             featureName: featureName,
-            featureDepedencies: featureDepedencies + featureInterfaceDepedency
+            featureDepedencies: featureDepedencies + featureInterfaceDepedency,
+            sampleDepedencies: sampleDepedencies
         )
         let sampleTargetArray = hasSample ? [sampleTarget] : []
         let interfaceTargetArray = hasInterface ? [interfaceTarget] : []
@@ -142,7 +144,8 @@ extension Project {
     }
 
     private static func sampleTarget(featureName: String,
-                                     featureDepedencies: [TargetDependency]) -> Target {
+                                     featureDepedencies: [TargetDependency],
+                                     sampleDepedencies: [TargetDependency] = []) -> Target {
         let featureSampleName = "\(featureName)Sample"
         
         return Target(
@@ -154,7 +157,9 @@ extension Project {
             infoPlist: "\(featureSampleName)/Info.plist",
             sources: ["\(featureSampleName)/Sources/**"],
             resources: ["\(featureSampleName)/Resources/**/*"],
-            dependencies: [ .target(name: featureName) ]  + featureDepedencies
+            dependencies: [ .target(name: featureName) ]  +
+                          featureDepedencies +
+                          sampleDepedencies
         )
     }
 }
