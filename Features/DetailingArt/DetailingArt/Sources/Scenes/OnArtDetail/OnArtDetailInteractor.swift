@@ -64,12 +64,12 @@ final class OnArtDetailInteractor: Interacting {
     }
     
     private func listenDetailExpand() {
-        //TODO: fix this capture list
-        openDetailPublisher.sink { [expandDetail, showMinimizedDetail, getArtDetail, updateArtLink] artURL in
-            showMinimizedDetail()
-            expandDetail()
-            updateArtLink(artURL)
-            getArtDetail(artURL)
+        openDetailPublisher.sink { [weak self] artURL in
+            guard let self = self else { return }
+            self.showMinimizedDetail()
+            self.expandDetail()
+            self.updateArtLink(artURL)
+            self.getArtDetail(link: artURL)
         }.store(in: &cancellables)
     }
 }
