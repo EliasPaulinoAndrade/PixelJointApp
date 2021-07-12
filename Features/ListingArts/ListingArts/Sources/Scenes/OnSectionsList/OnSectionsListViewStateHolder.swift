@@ -1,22 +1,25 @@
 import Foundation
 
-protocol OnSectionsListViewable: AnyObject {
-    var isShowingSectionSelection: Bool { get set }
-    
+protocol OnSectionsListViewable: AnyObject {    
     func displaySections(_ sections: [OnSectionsListView.Section])
     func displayCurrentSection(_ section: OnSectionsListView.Section)
 }
 
-final class OnSectionsListViewStateHolder: ObservableObject {
-    weak var interactor: OnSectionsListInteracting?
-    
+protocol OnSectionsListViewCoordinatable: AnyObject {
+    func displaySection(_ sections: [String: OnArtsListView])
+}
+
+final class OnSectionsListViewStateHolder: ObservableObject {    
     @Published var sections: [OnSectionsListView.Section] = []
-    @Published var currentSection: OnSectionsListView.Section = OnSectionsListView.Section(
+    @Published var artLists: [String: OnArtsListView] = [:]
+    @Published var currentSection: OnSectionsListView.Section = defaultSection
+    @Published var allowsArtListingDragging: Bool = true
+    
+    private static let defaultSection = OnSectionsListView.Section(
         id: "",
         title: "",
         systemImage: "burn"
     )
-    @Published var isShowingSectionSelection = false
 }
 
 extension OnSectionsListViewStateHolder: OnSectionsListViewable {
@@ -26,5 +29,11 @@ extension OnSectionsListViewStateHolder: OnSectionsListViewable {
     
     func displayCurrentSection(_ section: OnSectionsListView.Section) {
         self.currentSection = section
+    }
+}
+
+extension OnSectionsListViewStateHolder: OnSectionsListViewCoordinatable {
+    func displaySection(_ sections: [String: OnArtsListView]) {
+        artLists = sections
     }
 }

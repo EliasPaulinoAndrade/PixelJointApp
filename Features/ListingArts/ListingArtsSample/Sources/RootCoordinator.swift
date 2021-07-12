@@ -3,7 +3,10 @@ import UIKit
 import ListingArtsInterface
 
 final class RootCoordinator: ConnectionCoodinator, LauncherCoordinating {
-    private lazy var root = ListingArtsProxyBuilder().makeListingArts(listener: self)
+    private lazy var root = ListingArtsProxyBuilder().makeListingArts(
+        listener: self,
+        isVertical: false
+    )
     lazy var viewController: UIViewController = root.viewController
     
     func didLaunch() {

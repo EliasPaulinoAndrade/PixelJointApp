@@ -10,10 +10,10 @@ import Combine
 import UIKit
 
 struct ListingArtsProxyBuilder: ListingArtsBuildable {
-    func makeListingArts(listener: ListingArtsListener) -> ViewableCoordinating {
-        return ListingArtsBuilder(
+    func makeListingArts(listener: ListingArtsListener, isVertical: Bool) -> ViewableCoordinating {
+        ListingArtsBuilder(
             externalDepedency: ListingArtsDepedency()
-        ).makeListingArts(listener: listener)
+        ).makeListingArts(listener: listener, isVertical: isVertical)
     }
 }
 

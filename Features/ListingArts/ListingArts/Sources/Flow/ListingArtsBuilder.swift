@@ -10,8 +10,8 @@ public struct ListingArtsBuilder: ListingArtsBuildable {
         self.externalDepedency = externalDepedency
     }
     
-    public func makeListingArts(listener: ListingArtsListener) -> ViewableCoordinating {
+    public func makeListingArts(listener: ListingArtsListener, isVertical: Bool) -> ViewableCoordinating {
         OnSectionsListBuilder(externalDepedency: externalDepedency)
-            .makeOnSectionsList(listener: listener)
+            .makeOnSectionsList(listener: listener, isVertical: isVertical)
     }
 }

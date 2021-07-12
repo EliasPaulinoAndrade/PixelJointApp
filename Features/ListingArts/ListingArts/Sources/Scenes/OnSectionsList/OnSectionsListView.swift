@@ -14,57 +14,49 @@ struct OnSectionsListView: View {
     @ObservedObject var stateHolder: OnSectionsListViewStateHolder
     
     var body: some View {
-        HStack(spacing: 0) {
-            Image(systemName: stateHolder.currentSection.systemImage)
-                .foregroundColor(Color(UIToolKitAsset.text.color))
-            Text(stateHolder.currentSection.title)
-                .font(.body).bold()
-                .padding(8)
-                .foregroundColor(Color(UIToolKitAsset.text.color))
-            Spacer()
-            Button(
-                action: {
-                    stateHolder.interactor?.switchButtonSelected()
-                },
-                label: {
-                    Image(systemName: "arrow.right.arrow.left.circle.fill")
-                        .resizable()
-                        .frame(width: 30, height: 30)
+        VStack {
+            ScrollableSelectionView(
+                models: stateHolder.sections,
+                aligmentMode: .center,
+                selected: $stateHolder.currentSection
+            ) { section, isSelected in
+                Text(section.title)
+                    .fixedSize(horizontal: true, vertical: false)
+                    .font(isSelected ? .body.bold() : .body)
+                    .foregroundColor(
+                        Color(isSelected ? Colors.background1.color :
+                                           Colors.text1.color)
+                    )
+                    .padding(
+                        EdgeInsets(
+                            top: Spacing.base3.value,
+                            leading: Spacing.base4.value,
+                            bottom: Spacing.base3.value,
+                            trailing: Spacing.base4.value
+                        )
+                    )
+                    .background(
+                        Color(isSelected ? Colors.action1.color :
+                                           Colors.background3.color)
+                    )
+                    .clipShape(Capsule())
+                    .padding(.horizontal, 8)
+            }
+            GeometryReader { contextGeometry in
+                ScrollableFocusableView(
+                    models: stateHolder.sections,
+                    allowsDrag: stateHolder.allowsArtListingDragging,
+                    spacing: Spacing.base3.value,
+                    focused: $stateHolder.currentSection
+                ) { section in
+                    stateHolder.artLists[section.id]
+                        .frame(
+                            width: contextGeometry.size.width,
+                            height: contextGeometry.size.height
+                        )
                 }
-            ).foregroundColor(Color(UIToolKitAsset.link.color))
-        }.padding(16)
-         .background(Color(UIToolKitAsset.darkBackground.color))
-         .sheet(isPresented: $stateHolder.isShowingSectionSelection) {
-            VStack {
-                Text(Strings.sectionSelection)
-                    .font(.title).bold()
-                Spacer()
-                Picker(Strings.pleaseChooseSection, selection: $stateHolder.currentSection) {
-                    ForEach(stateHolder.sections) { section in
-                        Text(section.title).tag(section)
-                    }
-                }.onChange(of: stateHolder.currentSection) { currentSelection in
-                    stateHolder.interactor?.sectionSelected(identifier: currentSelection.id)
-                }
-                Spacer()
-                Button(
-                    action: {
-                        stateHolder.interactor?.closeButtonSelected()
-                    },
-                    label: {
-                        Group {
-                            Text(Strings.close)
-                                .font(.body).bold()
-                                .frame(maxWidth: .infinity)
-                                .foregroundColor(Color(UIToolKitAsset.darkBackground.color))
-                                .padding(8)
-                        }.background(Color(UIToolKitAsset.link.color))
-                         .cornerRadius(8)
-                         .padding(8)
-                    }
-                )
-            }.padding()
-             .foregroundColor(Color(UIToolKitAsset.text.color))
-         }
+            }
+        }.background(Color(Colors.background2.color))
+         .navigationTitle(Strings.pixelJoint)
     }
 }

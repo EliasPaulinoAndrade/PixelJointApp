@@ -17,7 +17,7 @@ public struct FooterEmptyStateView: View {
             } else if isShowingError {
                 VStack {
                     Text(errorTitle)
-                        .foregroundColor(Color(UIToolKitAsset.text.color))
+                        .foregroundColor(Color(UIToolKitAsset.Assets.text.color))
                     Button(
                         action: {
                             retryAction?()
@@ -28,13 +28,13 @@ public struct FooterEmptyStateView: View {
                                 Image(systemName: "arrow.counterclockwise")
                             }
                         }
-                    ).foregroundColor(Color(UIToolKitAsset.link.color))
+                    ).foregroundColor(Color(UIToolKitAsset.Assets.link.color))
                 }.onAppear {
                     onErrorAppearCompletion?()
                 }
             } else if hasNoMoreContent {
                 Text(noContentTitle)
-                    .foregroundColor(Color(UIToolKitAsset.text.color))
+                    .foregroundColor(Color(UIToolKitAsset.Assets.text.color))
             }
         }
     }

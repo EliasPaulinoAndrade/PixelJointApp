@@ -16,14 +16,10 @@
 		3BA4FA74DF40496C9471780D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85BDECDD907ADE287A47E602 /* NetworkError.swift */; };
 		3F3B6B094954D1487C91FF51 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C5047A80A7C29A4D742A02 /* HTTPMethod.swift */; };
 		44A1B619D5384424E1DC4A61 /* BodyParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246248DE0C62C6601FF8A46 /* BodyParams.swift */; };
-		46484514497F3AA8C5ABC41D /* NetworkingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BBDD9E7079BC157551F4F3 /* NetworkingKit.framework */; };
-		4823FD8B7D6ADCF4A6693F66 /* Doubles.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B4DB69E7FEF13A9AB1E1E /* Doubles.generated.swift */; };
 		55AFEC34CCAD8281085C8CB7 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1FCC42D28D29617F19A9BC /* JSONParser.swift */; };
 		586C4A7D4800A719986F1CC4 /* CacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3E49C7A717E531CF00ABF4 /* CacheProvider.swift */; };
 		60502EA31942610913B9D1EE /* CoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4182150F2E79D2961C41AEF2 /* CoreKit.framework */; };
-		68BC639E94A9CB133DEA2EC5 /* NetworkingKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186A67F28AF7B0C3C1D91A60 /* NetworkingKitTests.swift */; };
 		75848B454729248241524F57 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F77BAD812B9E44D0618DBA /* Provider.swift */; };
-		79BB222695E85B8CE5D98EA3 /* TestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349D2F0AACB431C435CC7221 /* TestKit.framework */; };
 		8597774C27538198A88CF00E /* BasicResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81047EFD45528C0DBD479BBD /* BasicResource.swift */; };
 		8893DF7EC80BF5F73E95769F /* Encodable+data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3697ACDCF5B7449915BBFC1 /* Encodable+data.swift */; };
 		89393585A1DBE829B61F9165 /* CompleteFileProviderReturn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251EBE1B1E75199DF6AB0B10 /* CompleteFileProviderReturn.swift */; };
@@ -43,13 +39,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B2992BBCB058326870EFC033 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 204902C59F3C0248D7900741 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C67B333E416B435A635BBBA;
-			remoteInfo = NetworkingKit;
-		};
 		BE1D0D3577D51F10E606151E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 204902C59F3C0248D7900741 /* Project object */;
@@ -60,16 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BBE7429EEEB933C8124D24DA /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		F7C822D5F204F58D67AC2976 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,10 +73,8 @@
 
 /* Begin PBXFileReference section */
 		0C2A40F6B70D62C54030084B /* URLSessionFileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFileProvider.swift; sourceTree = "<group>"; };
-		186A67F28AF7B0C3C1D91A60 /* NetworkingKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingKitTests.swift; sourceTree = "<group>"; };
 		251EBE1B1E75199DF6AB0B10 /* CompleteFileProviderReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteFileProviderReturn.swift; sourceTree = "<group>"; };
 		2D02DB006C8747A0BDD51711 /* ContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
-		349D2F0AACB431C435CC7221 /* TestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C5047A80A7C29A4D742A02 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		3F19F1F8D60615333D3BF040 /* NetworkingKitInterface.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkingKitInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F668B1D4BDAC872F4D6D781 /* ResultCompletion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultCompletion.swift; sourceTree = "<group>"; };
@@ -113,7 +90,6 @@
 		6B981EAD9EF08545ABDF6E25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7BDF1D21F1096C964B0FEE3B /* CompleteProviderReturn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteProviderReturn.swift; sourceTree = "<group>"; };
 		81047EFD45528C0DBD479BBD /* BasicResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicResource.swift; sourceTree = "<group>"; };
-		84F4A534E89E46E09457AC09 /* NetworkingKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85BDECDD907ADE287A47E602 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		86B351D50E5843737FE0F965 /* AnyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyProvider.swift; sourceTree = "<group>"; };
 		97F77BAD812B9E44D0618DBA /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
@@ -125,23 +101,12 @@
 		D534E2200D5524A8C9C77538 /* URLComponents+initWithResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+initWithResource.swift"; sourceTree = "<group>"; };
 		DB735D6E337251C1EB8DA58A /* CancellableTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancellableTask.swift; sourceTree = "<group>"; };
 		DD84DDA28CA52BD12B356909 /* QueryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItem.swift; sourceTree = "<group>"; };
-		E36B4DB69E7FEF13A9AB1E1E /* Doubles.generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doubles.generated.swift; sourceTree = "<group>"; };
 		EE28534A0B7FF96DFB140BA4 /* Resource+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resource+extension.swift"; sourceTree = "<group>"; };
-		FF1289E6925FEC80A8C98CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FF1FCC42D28D29617F19A9BC /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		FF3E49C7A717E531CF00ABF4 /* CacheProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		806400385F8936032A91DFFB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				46484514497F3AA8C5ABC41D /* NetworkingKit.framework in Frameworks */,
-				79BB222695E85B8CE5D98EA3 /* TestKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9B6331755332A816CAEEFF78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -168,14 +133,6 @@
 				46B38C400722FFB3D93097AF /* Frameworks */,
 				AE34D2DA2DFE9ACADE58056A /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		038C4369B65D1D6E80CC2444 /* Generated */ = {
-			isa = PBXGroup;
-			children = (
-				E36B4DB69E7FEF13A9AB1E1E /* Doubles.generated.swift */,
-			);
-			path = Generated;
 			sourceTree = "<group>";
 		};
 		2C9940CD19CC930D9E77914A /* Models */ = {
@@ -208,15 +165,6 @@
 				B22FF98C4A2DBF1EDCC5B940 /* URLSessionDataTask+CancellableTask.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		3EC4CFF84DC22E786D9A92B6 /* NetworkingKitTests */ = {
-			isa = PBXGroup;
-			children = (
-				8A218E15F23D8A1A66405EE0 /* Tests */,
-				FF1289E6925FEC80A8C98CC8 /* Info.plist */,
-			);
-			path = NetworkingKitTests;
 			sourceTree = "<group>";
 		};
 		46B38C400722FFB3D93097AF /* Frameworks */ = {
@@ -264,23 +212,12 @@
 			path = "Default Parsers";
 			sourceTree = "<group>";
 		};
-		8A218E15F23D8A1A66405EE0 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				038C4369B65D1D6E80CC2444 /* Generated */,
-				186A67F28AF7B0C3C1D91A60 /* NetworkingKitTests.swift */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
 		AE34D2DA2DFE9ACADE58056A /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				4182150F2E79D2961C41AEF2 /* CoreKit.framework */,
 				40BBDD9E7079BC157551F4F3 /* NetworkingKit.framework */,
 				3F19F1F8D60615333D3BF040 /* NetworkingKitInterface.framework */,
-				84F4A534E89E46E09457AC09 /* NetworkingKitTests.xctest */,
-				349D2F0AACB431C435CC7221 /* TestKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,7 +236,6 @@
 			children = (
 				DE07C7E104284CF45DC72125 /* NetworkingKit */,
 				594C01B645616C6D437ECA9A /* NetworkingKitInterface */,
-				3EC4CFF84DC22E786D9A92B6 /* NetworkingKitTests */,
 			);
 			name = Project;
 			sourceTree = "<group>";
@@ -391,27 +327,6 @@
 			productReference = 40BBDD9E7079BC157551F4F3 /* NetworkingKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D3C6CC0CAE9283D811308B3C /* NetworkingKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 75AB2B50BC45801DC35C3C04 /* Build configuration list for PBXNativeTarget "NetworkingKitTests" */;
-			buildPhases = (
-				61C0C63B0770F4FD9588A3B2 /* Sourcery */,
-				C9C5C43DCA42563320B32FE1 /* Sources */,
-				48AD82DE7CE2195F8873D9ED /* Resources */,
-				98B4E279C41AEC959CDF5AD7 /* Embed Precompiled Frameworks */,
-				BBE7429EEEB933C8124D24DA /* Embed Frameworks */,
-				806400385F8936032A91DFFB /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				66DE9CB4DEFF55106EE7B9C8 /* PBXTargetDependency */,
-			);
-			name = NetworkingKitTests;
-			productName = NetworkingKitTests;
-			productReference = 84F4A534E89E46E09457AC09 /* NetworkingKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -435,20 +350,12 @@
 			projectRoot = "";
 			targets = (
 				2C67B333E416B435A635BBBA /* NetworkingKit */,
-				D3C6CC0CAE9283D811308B3C /* NetworkingKitTests */,
 				1EDE423E14430BF731BC3D02 /* NetworkingKitInterface */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		48AD82DE7CE2195F8873D9ED /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7A8A9550F02CE932A839EE79 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -484,39 +391,7 @@
 			shellPath = /bin/sh;
 			shellScript = "swiftlint --config ./../../.swiftlint.yml";
 		};
-		61C0C63B0770F4FD9588A3B2 /* Sourcery */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Sourcery;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "sourcery --sources . --templates ./../../Tuist/Templates/StencilTemplates/Doubles.stencil --output ./NetworkingKitTests/Tests/Generated --args moduleName=NetworkingKit";
-		};
 		835A85C30BB5ACA447F70DFF /* Embed Precompiled Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Precompiled Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "echo \"Skipping, nothing to be embedded.\"";
-		};
-		98B4E279C41AEC959CDF5AD7 /* Embed Precompiled Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -588,24 +463,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9C5C43DCA42563320B32FE1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4823FD8B7D6ADCF4A6693F66 /* Doubles.generated.swift in Sources */,
-				68BC639E94A9CB133DEA2EC5 /* NetworkingKitTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		66DE9CB4DEFF55106EE7B9C8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NetworkingKit;
-			target = 2C67B333E416B435A635BBBA /* NetworkingKit */;
-			targetProxy = B2992BBCB058326870EFC033 /* PBXContainerItemProxy */;
-		};
 		997865100A2BDF4927BB0E75 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NetworkingKitInterface;
@@ -761,51 +621,6 @@
 			};
 			name = Debug;
 		};
-		939D6AFDE1E1DE5E4F854936 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = NetworkingKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.NetworkingKitTests;
-				PRODUCT_NAME = NetworkingKitTests;
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_COMPILATION_MODE = singlefile;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9AB808E0781479A49CE93875 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = NetworkingKitTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.tuist.NetworkingKitTests;
-				PRODUCT_NAME = NetworkingKitTests;
-				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		A2F22D4EFDA93B87E37FE001 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -902,15 +717,6 @@
 			buildConfigurations = (
 				779DBDD3E02561F2299083CE /* Debug */,
 				736463008DFAEBBFCE1FE804 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		75AB2B50BC45801DC35C3C04 /* Build configuration list for PBXNativeTarget "NetworkingKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				939D6AFDE1E1DE5E4F854936 /* Debug */,
-				9AB808E0781479A49CE93875 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -17,12 +17,24 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum UIToolKitAsset {
-  public static let background = UIToolKitColors(name: "Background")
-  public static let darkBackground = UIToolKitColors(name: "DarkBackground")
-  public static let extraDark = UIToolKitColors(name: "ExtraDark")
-  public static let link = UIToolKitColors(name: "Link")
-  public static let text = UIToolKitColors(name: "Text")
-  public static let networkingErrorIcon = UIToolKitImages(name: "networkingErrorIcon")
+  public enum Assets {
+    public static let background = UIToolKitColors(name: "Background")
+    public static let darkBackgroundLegacy = UIToolKitColors(name: "DarkBackgroundLegacy")
+    public static let extraDark = UIToolKitColors(name: "ExtraDark")
+    public static let link = UIToolKitColors(name: "Link")
+    public static let text = UIToolKitColors(name: "Text")
+    public static let networkingErrorIcon = UIToolKitImages(name: "networkingErrorIcon")
+  }
+  public enum Colors {
+    public static let action1 = UIToolKitColors(name: "Action1")
+    public static let background1 = UIToolKitColors(name: "Background1")
+    public static let background2 = UIToolKitColors(name: "Background2")
+    public static let background3 = UIToolKitColors(name: "Background3")
+    public static let background4 = UIToolKitColors(name: "Background4")
+    public static let darkBackground = UIToolKitColors(name: "DarkBackground")
+    public static let text1 = UIToolKitColors(name: "Text1")
+    public static let text2 = UIToolKitColors(name: "Text2")
+  }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

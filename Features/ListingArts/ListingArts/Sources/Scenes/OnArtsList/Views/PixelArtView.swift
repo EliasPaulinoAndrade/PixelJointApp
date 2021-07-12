@@ -12,7 +12,7 @@ struct PixelArtView: View {
     let imageProvider: AnyProvider<(data: Data, url: URL)>
 
     var body: some View {
-        VStack {
+        VStack(spacing: Spacing.base0.value) {
             AsyncImage(resource: art.resource, provider: imageProvider,
                 imageProvider: { image, _, url in
                     imageProvider(for: image, url: url)
@@ -23,16 +23,23 @@ struct PixelArtView: View {
                         .overlay(ProgressView())
                         .frame(width: Constant.itemSize, height: Constant.itemSize)
                 }
-            ).frame(maxWidth: .infinity)
+            ).frame(width: Constant.itemSize, height: Constant.itemSize)
              .aspectRatio(1, contentMode: .fill)
-             .background(Color(UIToolKitAsset.background.color.withAlphaComponent(0.5)))
+             .background(
+                Color(Colors
+                    .darkBackground.color
+                    .withAlphaComponent(0.2)
+                )
+             )
             Text(art.title)
+                .padding(Spacing.base2.value)
                 .multilineTextAlignment(.center)
-                .foregroundColor(Color(UIToolKitAsset.text.color))
-                .frame(maxHeight: .infinity, alignment: .top)
-                .font(.footnote)
-                .frame(height: 40)
-        }
+                .foregroundColor(Color(UIToolKitAsset.Assets.text.color))
+                .frame(height: 50)
+                .frame(maxWidth: .infinity, alignment: .top)
+                .font(.footnote.weight(.semibold))
+                .stylized(RoundedViewStyle(corners: [.bottomLeft, .bottomRight]))
+        }.frame(width: Constant.itemSize)
     }
     
     @ViewBuilder

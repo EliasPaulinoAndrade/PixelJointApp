@@ -3,8 +3,6 @@ import UIKit
 protocol OnSectionsListPresenting: AnyObject {
     func presentSections(_ sections: [ArtListSection])
     func presentCurrentSection(section: ArtListSection?)
-    func presentSectionSelection()
-    func hideSectionSelection()
 }
 
 final class OnSectionsListPresenter {
@@ -43,14 +41,6 @@ final class OnSectionsListPresenter {
 }
 
 extension OnSectionsListPresenter: OnSectionsListPresenting {
-    func hideSectionSelection() {
-        view.isShowingSectionSelection = false
-    }
-    
-    func presentSectionSelection() {
-        view.isShowingSectionSelection = true
-    }
-    
     func presentCurrentSection(section: ArtListSection?) {
         guard let section = getViewableSection(for: section) else {
             return

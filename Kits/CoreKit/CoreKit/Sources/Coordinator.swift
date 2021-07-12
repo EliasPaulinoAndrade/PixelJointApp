@@ -1,4 +1,5 @@
 import UIKit
+import SwiftUI
 
 public protocol Coordinating: AnyObject {
     var coordinators: [Coordinating] { get set }
@@ -12,6 +13,9 @@ public protocol Coordinating: AnyObject {
 }
 
 public extension Coordinating {
+    func attach(_ composables: [Coordinating]) {
+        composables.forEach(attach)
+    }
     func attach(_ composable: Coordinating) {
         coordinators.append(composable)
     }
@@ -94,3 +98,18 @@ open class ViewableCoordinator: Coordinator, ViewableCoordinating {
     private struct EmptyInteractor: Interacting { }
 }
 
+open class SwiftUIViewableCoordinator<ViewType: View>: Coordinator {
+    public let view: ViewType
+    
+    public var asViewableCoordinator: ViewableCoordinating {
+        ViewableCoordinator(
+            viewController: UIHostingController(rootView: view),
+            interactor: interactor
+        )
+    }
+    
+    public init(view: ViewType, interactor: Interacting) {
+        self.view = view
+        super.init(interactor: interactor)
+    }
+}

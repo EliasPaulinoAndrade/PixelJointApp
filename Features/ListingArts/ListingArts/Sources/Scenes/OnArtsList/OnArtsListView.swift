@@ -12,7 +12,8 @@ extension OnArtsListView {
 }
 
 private enum Constant {
-    static let itemSize: CGFloat = 100
+    static let itemWidth: CGFloat = 100
+    static let itemHeight: CGFloat = 150
 }
 
 struct OnArtsListView: View {
@@ -20,7 +21,13 @@ struct OnArtsListView: View {
     
     @ObservedObject private var stateHolder: OnArtsListViewStateHolder
     private let imageProvider: AnyProvider<(data: Data, url: URL)>
-    private let columns = [GridItem(.adaptive(minimum: Constant.itemSize, maximum: Constant.itemSize))]
+    private let columns = [
+        GridItem(
+            .adaptive(minimum: Constant.itemWidth, maximum: Constant.itemWidth),
+            spacing: Spacing.base5.value
+        )
+    ]
+    private let isVertical: Bool
     
     var body: some View {
         Group {
@@ -33,9 +40,9 @@ struct OnArtsListView: View {
                     retryAction: stateHolder.interactor?.retryFirstPageSelected
                 )
             } else {
-                ScrollView {
-                    VStack {
-                        LazyVGrid(columns: columns, spacing: 0) {
+                ScrollView(isVertical ? .vertical : .horizontal) {
+                    gridStack {
+                        itemsGrid {
                             ForEach(stateHolder.arts) { art in
                                 PixelArtView(art: art, imageProvider: imageProvider)
                                     .onTapGesture {
@@ -55,16 +62,52 @@ struct OnArtsListView: View {
                             retryTitle: Strings.tapToRetry,
                             noContentTitle: .constant(Strings.noMoreArts),
                             retryAction: stateHolder.interactor?.retrySelected
-                        ).padding(.all, 8)
+                        ).padding(.all, Spacing.base3.value)
                     }
                 }
             }
-        }.background(Color(UIToolKitAsset.darkBackground.color))
+        }.background(Color(Colors.background2.color))
     }
     
-    init(stateHolder: OnArtsListViewStateHolder, imageProvider: AnyProvider<(data: Data, url: URL)>) {
+    init(stateHolder: OnArtsListViewStateHolder,
+         imageProvider: AnyProvider<(data: Data, url: URL)>,
+         isVertical: Bool) {
         self.stateHolder = stateHolder
         self.imageProvider = imageProvider
+        self.isVertical = isVertical
+    }
+    
+    @ViewBuilder
+    private func gridStack<ViewType: View>(@ViewBuilder viewBuilder: () -> ViewType) -> some View {
+        if isVertical {
+            VStack(content: viewBuilder)
+        } else {
+            HStack(content: viewBuilder)
+        }
+    }
+    
+    @ViewBuilder
+    private func itemsGrid<ViewType: View>(viewBuilder: () -> ViewType) -> some View {
+        if isVertical {
+            let columnItem = GridItem(
+                .adaptive(minimum: Constant.itemWidth, maximum: Constant.itemWidth),
+                spacing: Spacing.base5.value
+            )
+            LazyVGrid(
+                columns: [columnItem],
+                spacing: Spacing.base4.value,
+                content: viewBuilder
+            )
+        } else {
+            let rowItem = GridItem(
+                .adaptive(minimum: Constant.itemHeight, maximum: Constant.itemHeight),
+                spacing: Spacing.base5.value
+            )
+            LazyHGrid(
+                rows: [rowItem],
+                spacing: Spacing.base4.value,
+                content: viewBuilder
+            )
+        }
     }
 }
-

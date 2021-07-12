@@ -29,16 +29,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B43B3DB0BAA7C1D0245AD378"
-               BuildableName = "WebScrapingKitTests.xctest"
-               BlueprintName = "WebScrapingKitTests"
-               ReferencedContainer = "container:WebScrapingKit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

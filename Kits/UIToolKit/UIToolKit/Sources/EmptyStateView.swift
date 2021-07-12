@@ -16,14 +16,14 @@ public struct EmptyStateView: View {
             VStack {
                 Spacer()
                 if mustShowImage {
-                    Image(uiImage: UIToolKitAsset.networkingErrorIcon.image)
+                    Image(uiImage: UIToolKitAsset.Assets.networkingErrorIcon.image)
                         .resizable()
                         .renderingMode(.template)
-                        .foregroundColor(Color(UIToolKitAsset.text.color))
+                        .foregroundColor(Color(UIToolKitAsset.Assets.text.color))
                         .frame(width: 30, height: 30)
                 }
                 Text(errorTitle)
-                    .foregroundColor(Color(UIToolKitAsset.text.color))
+                    .foregroundColor(Color(UIToolKitAsset.Assets.text.color))
                 
                 ZStack {
                     ProgressView()
@@ -38,7 +38,7 @@ public struct EmptyStateView: View {
                                 Image(systemName: "arrow.counterclockwise")
                             }
                         }
-                    ).foregroundColor(Color(UIToolKitAsset.link.color))
+                    ).foregroundColor(Color(UIToolKitAsset.Assets.link.color))
                      .opacity(isLoading ? 0 : 1)
                 }
                 Spacer()

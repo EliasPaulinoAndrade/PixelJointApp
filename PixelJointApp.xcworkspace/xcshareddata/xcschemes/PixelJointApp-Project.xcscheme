@@ -15,10 +15,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2C405DF17A344E7D8606E4F"
-               BuildableName = "TestKit.framework"
-               BlueprintName = "TestKit"
-               ReferencedContainer = "container:Kits/TestKit/TestKit.xcodeproj">
+               BlueprintIdentifier = "301F05F58D2611E998BD544E"
+               BuildableName = "WebScrapingKit.framework"
+               BlueprintName = "WebScrapingKit"
+               ReferencedContainer = "container:Kits/WebScrapingKit/WebScrapingKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,10 +29,24 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DF95C24BBBA93544A05362D9"
-               BuildableName = "TestKitTests.xctest"
-               BlueprintName = "TestKitTests"
-               ReferencedContainer = "container:Kits/TestKit/TestKit.xcodeproj">
+               BlueprintIdentifier = "47FAAA55F948D31CC24F479C"
+               BuildableName = "WebScrapingKitInterface.framework"
+               BlueprintName = "WebScrapingKitInterface"
+               ReferencedContainer = "container:Kits/WebScrapingKit/WebScrapingKit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C0E2BAB47E295A4548E4955F"
+               BuildableName = "CoreKit.framework"
+               BlueprintName = "CoreKit"
+               ReferencedContainer = "container:Kits/CoreKit/CoreKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -46,20 +60,6 @@
                BlueprintIdentifier = "2C67B333E416B435A635BBBA"
                BuildableName = "NetworkingKit.framework"
                BlueprintName = "NetworkingKit"
-               ReferencedContainer = "container:Kits/NetworkingKit/NetworkingKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3C6CC0CAE9283D811308B3C"
-               BuildableName = "NetworkingKitTests.xctest"
-               BlueprintName = "NetworkingKitTests"
                ReferencedContainer = "container:Kits/NetworkingKit/NetworkingKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -99,20 +99,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "262A37B1F8442F1C8F654D18"
-               BuildableName = "ListingArtsTests.xctest"
-               BlueprintName = "ListingArtsTests"
-               ReferencedContainer = "container:Features/ListingArts/ListingArts.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "9E4D12F70C0AA731EE637E63"
                BuildableName = "ListingArtsSample.app"
                BlueprintName = "ListingArtsSample"
@@ -141,220 +127,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C0E2BAB47E295A4548E4955F"
-               BuildableName = "CoreKit.framework"
-               BlueprintName = "CoreKit"
-               ReferencedContainer = "container:Kits/CoreKit/CoreKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C5257E482214943C4AF6C540"
-               BuildableName = "CoreKitTests.xctest"
-               BlueprintName = "CoreKitTests"
-               ReferencedContainer = "container:Kits/CoreKit/CoreKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "C6E37C7D2DFA51F431175C00"
                BuildableName = "UIToolKit.framework"
                BlueprintName = "UIToolKit"
                ReferencedContainer = "container:Kits/UIToolKit/UIToolKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "474D44DE20919C976339F2F6"
-               BuildableName = "UIToolKitTests.xctest"
-               BlueprintName = "UIToolKitTests"
-               ReferencedContainer = "container:Kits/UIToolKit/UIToolKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "362861230D763DD49F73D95B"
-               BuildableName = "DetailingArt.framework"
-               BlueprintName = "DetailingArt"
-               ReferencedContainer = "container:Features/DetailingArt/DetailingArt.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4EAF72FBDF22E8901396AF9"
-               BuildableName = "DetailingArtTests.xctest"
-               BlueprintName = "DetailingArtTests"
-               ReferencedContainer = "container:Features/DetailingArt/DetailingArt.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DB244BEA6167D767AC938004"
-               BuildableName = "DetailingArtSample.app"
-               BlueprintName = "DetailingArtSample"
-               ReferencedContainer = "container:Features/DetailingArt/DetailingArt.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ABD51747666FE40725049B31"
-               BuildableName = "DetailingArtInterface.framework"
-               BlueprintName = "DetailingArtInterface"
-               ReferencedContainer = "container:Features/DetailingArt/DetailingArt.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "301F05F58D2611E998BD544E"
-               BuildableName = "WebScrapingKit.framework"
-               BlueprintName = "WebScrapingKit"
-               ReferencedContainer = "container:Kits/WebScrapingKit/WebScrapingKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B43B3DB0BAA7C1D0245AD378"
-               BuildableName = "WebScrapingKitTests.xctest"
-               BlueprintName = "WebScrapingKitTests"
-               ReferencedContainer = "container:Kits/WebScrapingKit/WebScrapingKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "47FAAA55F948D31CC24F479C"
-               BuildableName = "WebScrapingKitInterface.framework"
-               BlueprintName = "WebScrapingKitInterface"
-               ReferencedContainer = "container:Kits/WebScrapingKit/WebScrapingKit.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BC798402399F40704B6952E1"
-               BuildableName = "PixelJoint.app"
-               BlueprintName = "PixelJoint"
-               ReferencedContainer = "container:PixelJoint/PixelJoint.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7AC226C047DD0613EDBED6B0"
-               BuildableName = "PixelJointTests.xctest"
-               BlueprintName = "PixelJointTests"
-               ReferencedContainer = "container:PixelJoint/PixelJoint.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FD7A21508DA34CE986D30F27"
-               BuildableName = "Root.framework"
-               BlueprintName = "Root"
-               ReferencedContainer = "container:Features/Root/Root.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B164EB9A79659669146E1465"
-               BuildableName = "RootTests.xctest"
-               BlueprintName = "RootTests"
-               ReferencedContainer = "container:Features/Root/Root.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13DF3DAA778C77A627930B4F"
-               BuildableName = "RootSample.app"
-               BlueprintName = "RootSample"
-               ReferencedContainer = "container:Features/Root/Root.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -365,96 +141,6 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DF95C24BBBA93544A05362D9"
-               BuildableName = "TestKitTests.xctest"
-               BlueprintName = "TestKitTests"
-               ReferencedContainer = "container:Kits/TestKit/TestKit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D3C6CC0CAE9283D811308B3C"
-               BuildableName = "NetworkingKitTests.xctest"
-               BlueprintName = "NetworkingKitTests"
-               ReferencedContainer = "container:Kits/NetworkingKit/NetworkingKit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "262A37B1F8442F1C8F654D18"
-               BuildableName = "ListingArtsTests.xctest"
-               BlueprintName = "ListingArtsTests"
-               ReferencedContainer = "container:Features/ListingArts/ListingArts.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C5257E482214943C4AF6C540"
-               BuildableName = "CoreKitTests.xctest"
-               BlueprintName = "CoreKitTests"
-               ReferencedContainer = "container:Kits/CoreKit/CoreKit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "474D44DE20919C976339F2F6"
-               BuildableName = "UIToolKitTests.xctest"
-               BlueprintName = "UIToolKitTests"
-               ReferencedContainer = "container:Kits/UIToolKit/UIToolKit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B4EAF72FBDF22E8901396AF9"
-               BuildableName = "DetailingArtTests.xctest"
-               BlueprintName = "DetailingArtTests"
-               ReferencedContainer = "container:Features/DetailingArt/DetailingArt.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B43B3DB0BAA7C1D0245AD378"
-               BuildableName = "WebScrapingKitTests.xctest"
-               BlueprintName = "WebScrapingKitTests"
-               ReferencedContainer = "container:Kits/WebScrapingKit/WebScrapingKit.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7AC226C047DD0613EDBED6B0"
-               BuildableName = "PixelJointTests.xctest"
-               BlueprintName = "PixelJointTests"
-               ReferencedContainer = "container:PixelJoint/PixelJoint.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B164EB9A79659669146E1465"
-               BuildableName = "RootTests.xctest"
-               BlueprintName = "RootTests"
-               ReferencedContainer = "container:Features/Root/Root.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -470,10 +156,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2C405DF17A344E7D8606E4F"
-            BuildableName = "TestKit.framework"
-            BlueprintName = "TestKit"
-            ReferencedContainer = "container:Kits/TestKit/TestKit.xcodeproj">
+            BlueprintIdentifier = "301F05F58D2611E998BD544E"
+            BuildableName = "WebScrapingKit.framework"
+            BlueprintName = "WebScrapingKit"
+            ReferencedContainer = "container:Kits/WebScrapingKit/WebScrapingKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </LaunchAction>
@@ -486,10 +172,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2C405DF17A344E7D8606E4F"
-            BuildableName = "TestKit.framework"
-            BlueprintName = "TestKit"
-            ReferencedContainer = "container:Kits/TestKit/TestKit.xcodeproj">
+            BlueprintIdentifier = "301F05F58D2611E998BD544E"
+            BuildableName = "WebScrapingKit.framework"
+            BlueprintName = "WebScrapingKit"
+            ReferencedContainer = "container:Kits/WebScrapingKit/WebScrapingKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

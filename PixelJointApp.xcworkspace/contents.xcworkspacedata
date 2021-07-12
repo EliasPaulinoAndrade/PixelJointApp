@@ -5,13 +5,7 @@
       location = "group:Features"
       name = "Features">
       <FileRef
-         location = "group:DetailingArt/DetailingArt.xcodeproj">
-      </FileRef>
-      <FileRef
          location = "group:ListingArts/ListingArts.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Root/Root.xcodeproj">
       </FileRef>
    </Group>
    <Group
@@ -24,9 +18,6 @@
          location = "group:NetworkingKit/NetworkingKit.xcodeproj">
       </FileRef>
       <FileRef
-         location = "group:TestKit/TestKit.xcodeproj">
-      </FileRef>
-      <FileRef
          location = "group:UIToolKit/UIToolKit.xcodeproj">
       </FileRef>
       <FileRef
@@ -34,7 +25,7 @@
       </FileRef>
    </Group>
    <FileRef
-      location = "group:PixelJoint/PixelJoint.xcodeproj">
+      location = "group:Features/DetailingArt/DetailingArt.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

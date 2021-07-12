@@ -3,36 +3,40 @@ import UIKit
 
 protocol OnSectionsListCoordinating: AnyObject {
     func openArtsListing(sections: [ArtListSection], listener: OnArtsListListener)
-    func goToSection(identifier: String)
 }
 
 final class OnSectionsListCoordinator: ViewableCoordinator {
     
     private let listingArtsBuilder: OnArtsListBuildable
-    private let tabRouter: TabRouting
+    private let sectionsViewCoordinatable: OnSectionsListViewCoordinatable
 
     init(viewController: UIViewController,
+         sectionsViewCoordinatable: OnSectionsListViewCoordinatable,
          interactor: Interacting,
-         tabRouter: TabRouting,
          listingArtsBuilder: OnArtsListBuildable
     ) {
-        self.tabRouter = tabRouter
         self.listingArtsBuilder = listingArtsBuilder
+        self.sectionsViewCoordinatable = sectionsViewCoordinatable
         super.init(viewController: viewController, interactor: interactor)
     }
 }
 
 extension OnSectionsListCoordinator: OnSectionsListCoordinating {
-    func goToSection(identifier: String) {
-        tabRouter.changeToTab(with: identifier)
-    }
-    
     func openArtsListing(sections: [ArtListSection], listener: OnArtsListListener) {
-        sections.forEach { section in
-            let artsListing = listingArtsBuilder.makeOnArtsList(section: section, listener: listener)
-            
-            attach(artsListing)
-            tabRouter.add(coordinator: artsListing, identifier: section.identifier)
+        let artListingList = sections.map { section in
+            listingArtsBuilder.makeOnArtsList(
+                section: section,
+                listener: listener
+            )
         }
+        
+        let artListBySection = zip(sections, artListingList).map { section, artList in
+            (section.identifier, artList.view)
+        }
+                
+        attach(artListingList)
+        sectionsViewCoordinatable.displaySection(
+            Dictionary(uniqueKeysWithValues: artListBySection)
+        )
     }
 }

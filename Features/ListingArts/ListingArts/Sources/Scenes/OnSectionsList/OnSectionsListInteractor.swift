@@ -2,17 +2,12 @@ import Foundation
 import CoreKit
 import ListingArtsInterface
 
-protocol OnSectionsListInteracting: AnyObject {
-    func sectionSelected(identifier: String)
-    func switchButtonSelected()
-    func closeButtonSelected()
-}
-
 typealias OnSectionsListListener = ListingArtsListener
 
 final class OnSectionsListInteractor: Interacting {
     private lazy var sections = getAllSections()
     private let presenter: OnSectionsListPresenting
+    private lazy var currentSectionID = sections.first?.identifier
     weak var coordinator: OnSectionsListCoordinating?
     weak var listener: OnSectionsListListener?
     
@@ -42,29 +37,8 @@ final class OnSectionsListInteractor: Interacting {
     }
 }
 
-extension OnSectionsListInteractor: OnSectionsListInteracting {
-    func switchButtonSelected() {
-        presenter.presentSectionSelection()
-    }
-    
-    func closeButtonSelected() {
-        presenter.hideSectionSelection()
-    }
-    
-    func sectionSelected(identifier: String) {
-        coordinator?.goToSection(identifier: identifier)
-    }
-}
-
 extension OnSectionsListInteractor: OnArtsListListener {
     func pixelArtSelected(_ link: URL) {
         listener?.pixelArtSelected(link)
-    }
-}
-
-extension OnSectionsListInteractor: TabRouterDelegate {
-    func userDidChangeTab(originalIdentifier: String, targetIdentifier: String) {
-        let selectedSection = sections.first { $0.identifier == targetIdentifier }
-        presenter.presentCurrentSection(section: selectedSection)
     }
 }
